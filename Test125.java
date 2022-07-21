@@ -22,11 +22,45 @@
 	};			 ← check ~!!세미 콜론
 */
 
-public class Test125
-{	
-	public static void main(String[] args)
+//import java.leng.*;
+class Test3		//extends Object
+{
+	/*Object의 멤버들~!!!
+
+	public String toString()
 	{
-		
+
+	}
+	*/
+	public Object getString()
+	{
+		return new Object()
+		{
+			@Override
+			public String toString()
+			{
+				return "익명의 클래스.....";
+			}
+		};		//← 세미콜론 주의~!~!(미 작성시 에러)
+
+	}
+
+}
+
+public class Test125	//extends Object
+{	
+	/*
+	object 의 멤버들 상속~!!!
+	*/
+	public static void main(String[] args)
+	{	
+		Test3 ob1 = new Test3();
+
+		System.out.println(ob1.toString());
+		//--==>>Test3@15db9742
+
+		System.out.println(ob1.getString());
+		//--==>>익명의 클래스.....
 	}
 
 }

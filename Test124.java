@@ -62,7 +62,7 @@ public class Test124
 		//	단독으로 내부 클래스의 인스턴스를 생성하는 것은 불가능하다.
 		//	내부 클래스의 객체를 생성하는 것이 가능하다.
 		//	→ 외부 클래스의 객체를 사용하면
-		//	내부 클래스의 객체를 생성하는것이 가능하다.
+		//	내부 클래스의 객체를 생성 하는것이 가능하다.
 
 		InnerOuterTest.InnerNested ob5 = ob2.new InnerNested();
 		ob5.write();
