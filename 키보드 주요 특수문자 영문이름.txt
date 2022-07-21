@@ -1,0 +1,38 @@
+키보드 주요 특수문제 영문이름
+`-> Grave	 R		`
+~ ->Tilde	 R		~
+! ->Exclamation Point
+@ ->At Sign, Commercial Sign
+# -> Crosshatch, Sharp, Pound Sign
+$ -> Dollar Sign
+% -> Percent Sign
+^ -> Circumflex		R	^
+& -> Ampersand		R	&
+* -> Asterisk
+( -> Left Paranthesis
+) -> Right Parenthesis
+() -> Parentheses     
+- -> Hyphen, Dash, Minus Sign
+_ -> Unberscore, Underline, Uunderbar
+= -> Equl Sign
++ -> Plus Sign
+| -> Vartical Ber	R	||
+[ -> Left Bracket
+] -> Right Bracket
+[]  -> Brackets
+{  -> Left Brace
+}  -> Right Brece
+{}  -> Brece		 복수형태로 사용x
+;  -> Semicolon
+: -> Colon 
+" -> Qutation Mark       더블쿼테이션
+' -> Apostrophe		싱글쿼테이션
+, -> Comma
+. -> Period, Full Stop, Dot
+< -> Less Than Sign, Sign, Left Angle Braket
+> -> Greater Than Sign, Right Angle Braket
+<> -> Angle Brackets
+/ -> Slash, Virgule
+\ -> Back Slash, Won Sign		
+? -> Question Mark 
+ -> Space
