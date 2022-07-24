@@ -10,7 +10,7 @@ class NewCar		//extends Object
 	Object ÀÇ ¸â¹öµé
 	*/
 	private int velocity;
-	private int wheelNum;
+	private int wheelNum;  
 	private String carName;
 
 	NewCar(int speed, String name, int wheel)

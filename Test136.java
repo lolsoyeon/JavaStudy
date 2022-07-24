@@ -75,7 +75,7 @@ public class Test136
 		//		s3 == s4 : false
 		//		s4 == s1 : false
 
-		//?객체니까 주소다~!
+		//객체 생성하는 것은 새 메모리를 할당한다.  ?객체니까 주소다~!
 
 		//※ s1과 s2 객체가 참조하는 문자열 상수가 동일한 경우
 		//	문자열이 저장된 기억장소의 영역이 동일하기 때문에
@@ -88,7 +88,7 @@ public class Test136
 		//	만약 같은 문자열 상수인지의 여부를 비교해야 할 경우라면
 		//	equals()메소드를 이용해야한다.
 
-		//※ String 클래스는 Object 의 eqauls() 를 Overriding~!!!!!!
+		//※ String 클래스는 Object 의 equals() 를 Overriding~!!!!!!
 
 
 		//같은 문자열 상수인지의 여부를 비교★★★★써먹자 
@@ -105,15 +105,15 @@ public class Test136
 		System.out.println("s2 : " + s2.hashCode());
 		System.out.println("s3 : " + s3.hashCode());
 		System.out.println("s4 : " + s4.hashCode());
-		//--==s1 : 109324212
-		//	s2 : 109324212
+		//--==>>s1 : 109324212
+		//		s2 : 109324212
 		//		s3 : 109324212
 		//		s4 : 109324212
 
-		//객체가 같으면 hashCOrd가 같지만
+		//객체가 같으면 hashCord가 같지만
 		//hashCord 가 같다고 해서 같은 객체는 아니다~!~!
 
-		s2 += "korea";
+		s2 += " korea";
 		System.out.println("s2 : " + s2);
 
 		//s2 : seoulkorea
@@ -124,8 +124,8 @@ public class Test136
 		//같은예시 강감찬 비온다.
 		//--이와 같은경우
 		//	s2가 참조한 seoul이 저장된 영역은
-		//	s2 +="korea"; 사 수행되는 시점에서
-		//	해당 영역의 값이 변경회는 것이 아니라
+		//	s2 +="korea"; 가 수행되는 시점에서
+		//	해당 영역의 값이 변경되는 것이 아니라
 		//	가비지 콜렉션의 대상이 되며,
 		//	"seoul korea" 상수가 저장된 영역을 
 		//	s2가 참조하게 되었다가

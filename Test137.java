@@ -13,8 +13,8 @@ public class Test137
 
 		//○ 문자열 추출 
 		System.out.println(s.substring(6,9));
-
-		//String. substring(s.e)
+		//--==>>kor
+		//String. substring(s,e)
 		//String 문자열을 대상으로
 		//s번째 에서....e-1 번째까지 추출
 		//단, 인덱스는 0부터 시작
@@ -22,7 +22,7 @@ public class Test137
 		System.out.println(s.substring(7));
 		//String substring(s)
 		//String 문자열을 대상으로
-		//s번째 ...끝까지 추출
+		//s번째에서 ...끝까지 추출
 		//즉, 문자열이 가진 길이만큼
 
 		//문자열의 데이터 값 비교
@@ -32,7 +32,7 @@ public class Test137
 		//false
 		//대소문자 엄격히 구분
 
-		System.out.println(s.equalsIgnoreCase("SEOUL KOREA"));
+		System.out.println(s.equalsIgnoreCase("SEOUL KOREa"));
 		//-->>true
 		//--대소문자 구분 안함
 
@@ -41,6 +41,7 @@ public class Test137
 		// kor  문자열이 존재 할까?
 		//존재한다면.......그 위치는 어떻게 될까?
 
+		System.out.println("---------------------구분선");
 		//"seoul korea"
 		// 0123456789
 		System.out.println(s.indexOf("kor"));
@@ -67,7 +68,7 @@ public class Test137
 		//--==>>true
 		//		false
 
-		//○ 찾고자 하는 대상 문자열(s)dp
+		//○ 찾고자 하는 대상 문자열(s)에
 		//	『e』문자열이 존재할까?
 		//	존재한다면...그 위치는 어떻게 될까?
 		//	(단, 뒤에서 부터 검사)
@@ -105,10 +106,12 @@ public class Test137
 
 
 		System.out.println(s.compareTo("seoul korea"));
-		//--==>> 0 → 두문자열이 같다 (s와 seoul)
+		//--==>> 0 → 두문자열이 같다 (s와 seoul korea)
 		System.out.println(s.compareTo("seoul corea"));
 		//--==>> 8
 		//-- c ~ k → defghijk → 8
+		//아마도 인덱스는 0부터 시작??????인듯
+
 
 		//○ 대상문자열(s) 중
 		//해당 문자열을 찾아서 원하는 형태로 수정된 문자열 반환 
@@ -124,7 +127,7 @@ public class Test137
 		//○ 공백 제거
 		s ="          사          랑          ";
 
-		//System.out.println(s);
+		System.out.println(s);
 		System.out.println("|" + s + "| ");
 		//--==>>|          사          랑          |
 
@@ -135,7 +138,7 @@ public class Test137
 		//--양쪽 가장자리 공백제거
 		//trim() 이라는 메소드사용 제대로 사용법 확인 오라클등등사용 substring 역시  
 
-		//트림 : 손톱깍이!!! 특징은  
+		//트림 : 손톱깍이의 특징을 가짐 !!! 
 
 
 
