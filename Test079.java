@@ -27,6 +27,112 @@
 	arr[2] = 3;
 */
 
+
+
+//자료형이 무엇인가?
+// -> 원시 자료형 = 8개 -> 따라가면 값이 있다
+// -> 레퍼런스 자료형 = 주소를 따라가게 되어있다.
+
+//배열이 무엇인가??
+// -> (Java 기준) 동일한 자료형을 하나의 자료구조에 담아 해당 값들을 index로 구분하기 위함.
+
+//배열을 어떻게 선언하는가?
+//방의 갯수가 3개인 String 자료형의 배열을 선언하시오.
+//temp?배열 내에 "철수", "짱구", "유리"를 순서대로 할당하시오.
+public static void main(String[] args) {
+	String temp[] = new String[3];
+
+	temp[0] = "철수";
+	temp[1] = "짱구";
+	temp[2] = "유리";
+
+	temp[] = {"철수", "짱구", "유리"};
+	
+}
+/*
+0 0 0
+            //세로 //가로
+String temp2[5][2];
+
+00 00 00 00 00
+
+0 0 0 0 0
+0 0 0 0 0
+
+temp2[1][2]
+
+
+
+*/
+
+
+
+
+
+
+
+							//방의 갯수
+		int[] arr = new int[100];
+
+		// 0부터 시작
+		arr[0] = 0;
+		arr[1] = 1;
+		...
+		arr[99] = 99;
+
+
+		//무한루프
+		for(;;){
+			System.out.println("테스트");
+		}
+
+		while() {
+
+		}
+
+
+		String ssangYongMember[] = {"멋쟁이", "전공자", "비전공자", "철수", "영희"};
+
+		for(int i =0;i<ssangYongMember.length;i++) {
+			System.out.println(ssangYongMember[i]);
+		}
+
+		//쌍용멤버가 있다.
+		//해당 멤버 중 인덱스가 홀수인 인원의 이름만 표시하시오.
+		for(int i=1; i<ssangYongMember.length; i=i+2) {
+			System.out.println(ssangYongMember[i]);
+		}
+
+		//쌍용멤버가 있다.
+		//해당 멤버 중 인덱스가 0이거나 짝수인 인원의 이름만 표시하시오.
+
+
+		/*
+			생각해야 할 것 = 이 요구사항을 코드로 구현하려면 어떻게 해야될까?
+					       = 이 요구사항이 내가 방금 배운거랑 무슨 연관성이 있을까?
+						   = 순서가 어떻게 되어야 할까?
+
+			[설계]
+			1. for문 내에서 시작 변수인 i를 0으로 할당한다.
+			2. i의 조건식은 배열인 arr의 length보다 작아야 한다.
+			3. 증감식에서 2씩 증가 시켜준다.
+			4. 배열의 인덱스에 생성해준 변수인 i를 넣어준다.
+			
+		
+		*/
+		for(int i=0; i<arr.length(); i=i+2) {
+			System.out.println(arr[i]);
+		}
+
+
+
+
+
+
+
+
+
+
 public class Test079
 {
 	public static void main(String[] args)
