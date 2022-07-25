@@ -1,5 +1,5 @@
 /*=================================================================
-   ■■■ 자바의 주요(중요) 클래스 ■■■ 2022-07-22 오후 3:18
+   ■■■ 자바의 주요(중요) 클래스 ■■■ 2022-07-22 오후 3:18  2022-07-25
  - 자바에서 기본적으로 제공하는 주요 클래스들
  - String 클래스 
 ==================================================================*/
@@ -118,7 +118,7 @@ public class Test137
 		//해주는것 뿐 s를 바꾸는것이 아니다.
 
 		s = "우리나라 대한민국 대한독립 만세";
-		s= s.replaceAll("대한", "자주");
+		s = s.replaceAll("대한", "자주");
 
 		System.out.println("처리 결과 : " + s);
 		//--==>>처리 결과 : 우리나라 자주민국 자주독립 만세
@@ -139,8 +139,56 @@ public class Test137
 		//trim() 이라는 메소드사용 제대로 사용법 확인 오라클등등사용 substring 역시  
 
 		//트림 : 손톱깍이의 특징을 가짐 !!! 
+		System.out.println("|" + s.replaceAll(" ","") + "|");
+		//--==>>|사랑|
 
 
+		//"50"
+		int temp = Integer.parseInt("50");
+		//System.out.println(temp);
+		System.out.printf("%d\n" ,temp);
+
+
+		s = Integer.toString(30);
+		System.out.printf("%s%n",s);
+		//--==>>30
+
+//Object 가 물려준 toString 은 매개변수가 없는데 이건있으므로 오버로딩
+//Integer는 클래스 메소드다 즉 static붙어있음
+	
+		int n = 2345678;
+		System.out.printf("%d",n);
+		System.out.format("%d",n);
+		//--==>>23456782345678
+		
+		System.out.println();
+
+		 
+		s = String.format("%d",n);		//문자열을 반환하는 format()
+		System.out.println(s);
+		//--==>>2345678
+
+		s = String.format("%,d",n);			//3자리마다 ,찍어줌
+		System.out.println(s);
+		//--==>>2,345,678
+
+		//String str ="기본,열정,배려";
+		//String[] atrArr = str.split("",""); 
+
+		//line 175 ~ 176과 동일한 구문
+		//String 객체임
+
+		String []strArr = "기본,열정,배려".split(",");
+		//split 주민번호 복습하기
+
+		for (String str :strArr )
+		{
+			System.out.print(str + " ");
+		}
+		System.out.println();
+		//--==>>기본 열정 배려
+
+	
 
 
 
