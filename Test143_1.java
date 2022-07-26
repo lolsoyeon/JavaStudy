@@ -50,7 +50,7 @@ public class Test143_1
 		//System.out.println(w);
 		//--==>> 6 →2022년 7월 기준 →금요일 →2022년 7월 1일은 금요일~!
 
-		//결롸 출력 →달력그리기
+		//결과 출력 →달력그리기
 		System.out.println();
 		System.out.println("\t[" + y +"년" + m + " 월]\n");
 		System.out.println("  일  월  화  수  목  금  토 ");
@@ -74,8 +74,10 @@ public class Test143_1
 				System.out.println();	//개행 후 출력될 수 있도록 처리
 			}
 		}
+
+		
 		if (w % 7 != 1)				//일요일 개행이 적용되지 않았을 경우에만
-									//개행 처리
+									//개행 처리   알겠는데 원리는...?
 			System.out.println();
 		System.out.println("=============================");
 

@@ -110,7 +110,6 @@ public class Test095
 				min = arr[i];
 			
 		}
-		
 		// 결과 출력
 		System.out.printf("가장 큰 값 : %d, 가장 작은 값 : %d\n", max, min);
 	}
