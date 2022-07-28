@@ -1,4 +1,4 @@
-/*================================================
+                                                                                                                                           /*                                                            
    ■■■컬렉션(Collection) ■■■ 2022-07-27  ★
  =================================================*/
 
@@ -11,12 +11,13 @@
 */
 //클래스 → 사용자정의 자료형으로 활용
 import java.util.Vector;
+import java.util.Iterator;                                                                    
 class MyData
 {
 	//주요 속성 구성 → 주요변수 선언(멤버 변수)
 	private String name;			//이름
 	private int age;				//나이
-
+              
 	//getXxx() → getter
 	//setXxx() → setter
 
@@ -32,8 +33,6 @@ class MyData
 	}
 
 
-
-
 	public int getAge()				//age의 getter 
 	{
 		return age;
@@ -44,19 +43,20 @@ class MyData
 		this.age = age;				//초기화 하는형태
 		
 	}
+
 	//생성자 (매개변수 2개인 생성자) → 사용자 정의 생성자
 	public MyData(String name , int age)
 	{
 		this.name = name;
 		this.age = age;
 	}
-	//사용자정의 생성자가 구성될 경우
+	//★ 사용자정의 생성자가 구성될 경우
 	//defaut 생성자가 자동으로 삽입되지 않기 때문에
-	//형태의 생성자를 사용자정의 생성자로
-	//추가구성게되는것이 일반적인 클래서 설게과정
-	//(반드시 설계해야한다는 문법적인규칙은 없암)
+	//defaut 생성자 형태의 생성자를 사용자정의 생성자로
+	//추가 구성하게되는것이 일반적인 클래서 설계과정
+	//(반드시 설계해야 한다는 문법적인 규칙은 없음)
 
-	//생성자(매개변수 없는 생성자)
+	//생성자(매개변수 없는 생성자) 이 구문의 의미는????????
 	public MyData()
 	{
 		this("",0);
@@ -76,7 +76,7 @@ public class Test162
 		//벡터 자료구조 v 에
 		//정영준 13세 / 정미경 7세 /한은영 3세
 		//담아내기
-
+/*
 		//①
 		MyData st1 = new MyData();
 		st1.setName("정영준");
@@ -100,14 +100,61 @@ public class Test162
 		v.add(st2);
 		MyData st3 = new MyData("한은영", 3);
 		v.add(st3);
-
+*/
 		//③
 		v.add(new MyData("정영준",13));
 		v.add(new MyData("정미경",7));
 		v.add(new MyData("한은영",3));
 
+		//벡터 자료구조 v에 담긴 내용(요소) 전체 출력하기
+		//실행예)
+		//이름 : 정영준, 나이 13세
+		//이름 : 정미경, 나이 7세
+		//이름 : 한은영, 나이 3세
+
+		//
+		/*
+		for (MyData obj : v)
+		{
+			System.out.printf("이름 : %s, 나이 %d세\n", obj.getName(), obj.getAge());
+		}
+		//==>>이름 : 정영준, 나이 13세
+		// 	 이름 : 정미경, 나이 7세
+		//	 이름 : 한은영, 나이 3세
+		//계속하려면 아무 키나 누르십시오 . . .
+		*/
+/*
+		//
+		for (int i=0 ;i<v.size() ;i++ )
+		{
+			System.our.printf("이름 : %s, 나이 %d세", v.elementAt(i).getName(), v.elementAt(i).getAge());
+		}
+*/
+		//다운캐스팅?
+		for (Object temp : v)
+		{
+			System.out.printf("이름 : %s, 나이 %d세\n", ((MyData)temp).getName(), ((MyData)temp).getAge());
+		}
+		/*
+		이름 : 정영준, 나이 13세
+		이름 : 정미경, 나이 7세
+		이름 : 한은영, 나이 3세
+		계속하려면 아무 키나 누르십시오 . . .
+
+		*/
 
 
+
+/*
+		Iterator<MyData> it = v.iterator();
+
+		while (it.hasNext())		//true true true true true true false
+		{
+			name = (String)it.next();	//검정 노랑 초록 파랑 빨강 연두
+			System.out.printf("이름 : %s , 나이 %d세", name,age);	
+		}
+		System.out.println();
+*/
 
 		//for (int a : arr )
 		//{

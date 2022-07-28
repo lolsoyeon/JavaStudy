@@ -16,7 +16,7 @@ public class Test161
 			//벡터 자료구조 생성
 			Vector<String> v = new Vector<String>();
 
-			//벡터자료구조 v에 colors 배열에 대에터 요소룰 추가
+			//벡터자료구조 v에 colors 배열에 데이터 요소를 추가
 			for (String color: colors )
 			{
 				v.add(color);
@@ -58,7 +58,7 @@ public class Test161
 			 //--==>>노랑→ index위치 : 1
 
 
-			//찾아서 삭제한 후 저ㅗㅇ체 요소 출력
+			//찾아서 삭제한 후 전체 요소 출력
 			System.out.print("삭제 후 전체 요소 출력 : ");
 				for (String str : v )
 				{
