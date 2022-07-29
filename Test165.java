@@ -79,9 +79,8 @@ public class Test165
 		//list3.add(1, "레미제라블"); 내가한것 성공!~!~!
 
 
-
 		//출력 → 더미네이터 확인
-
+		System.out.println(); 
 		System.out.println("========================");
 		System.out.println(list1);
 		//--==>>[범죄도시2, 탑건2, 마녀2]
@@ -114,7 +113,6 @@ public class Test165
 		System.out.println();
 		//==>>인셉션 마녀2 탑건2 레미제라블 범죄도시2
 
-
-
+		
 	}
 }

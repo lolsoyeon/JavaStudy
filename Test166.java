@@ -77,7 +77,8 @@ public class Test166
 			System.out.print(list.get(idx) + " ");
 		}
 		System.out.println();
-
+		//--==>>전체 요소 출력....①
+		//서울 부산 대전 대구 광주 울산 세종
 
 
 		System.out.println("역순 출력...①");

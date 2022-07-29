@@ -92,7 +92,7 @@ public class Test162
 		st1.setName("한은영");
 		st1.setAge(3);
 		v.add(st3);   
-
+p
 		//②
 		MyData st1 = new MyData("정영준", 13);
 		v.add(st1);
@@ -135,6 +135,7 @@ public class Test162
 		{
 			System.out.printf("이름 : %s, 나이 %d세\n", ((MyData)temp).getName(), ((MyData)temp).getAge());
 		}
+
 		/*
 		이름 : 정영준, 나이 13세
 		이름 : 정미경, 나이 7세
@@ -142,7 +143,6 @@ public class Test162
 		계속하려면 아무 키나 누르십시오 . . .
 
 		*/
-
 
 
 /*
@@ -163,7 +163,7 @@ public class Test162
 		//System.out.println();
 
 
-//벡터 자료구조 v 에
+		//벡터 자료구조 v 에
 		//정영준 13세 / 정미경 7세 /한은영 3세
 		//담아내기
 
