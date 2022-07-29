@@ -1,0 +1,29 @@
+import java.io.IOException;
+public class Test172
+{
+	public static void main(String[] args) throws IOException
+	{
+		int data;
+		char ch;
+
+		System.out.println("문자열 입력(종료 : ctrl+z)");
+		
+		읽다
+		//read() : InputStream 클래스의 대표적인 메소드(바이트 스트림)
+		//
+		while( data = System.in.read() != -1)
+		{
+			케릭터 ch = (char)data; 인트
+		}
+		System.out.write(ch);
+		write() : OutputStream 클래스의 대표적 메소드 (바이트 스트림)
+		쓰다 
+
+
+
+		System.out.println("문자열 입력(종료 : ctrl+z)"); 문자 스트림
+		System.out.write(ch);			바이트 스트림
+		
+
+	}
+}

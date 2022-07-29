@@ -58,10 +58,12 @@ public class Test170
 			String findName1 = "정영준";	 //"정영춘"
 			String str = ht.get(findName1);  //키넘기면 값줌
 
-			if (str != null)
+			if (str != null) 
 			{
 				System.out.println(findName1 + " 전화번호 : " + str);
 			}
+
+
 			//else
 			//{
 			//	System.out.println("띠용~!~!~!");//검색기능처럼 없으면 이렇게 구성
@@ -70,7 +72,9 @@ public class Test170
 
 			//--==>>정영준 전화번호 : 010-4151-5510
 
-			//ht라는 Hashtable 자료구에 key 가 존재하는지 의 여부확인
+
+
+			//ht라는 Hashtable 자료구조에 key 가 존재하는지 의 여부확인
 			// → containsKey() ★★★
 			
 			String findName2 = "최동현";    //findNames2바꿔보자 
@@ -79,9 +83,8 @@ public class Test170
 				System.out.println(findName2 + " 데이터가 존재합니다");
 			}
 			else
-			{
 				System.out.println(findName2 + " 데이터가 존재하지 않습니다");
-			}
+			
 
 			String findName3 = "최나윤";
 
@@ -100,7 +103,7 @@ public class Test170
 			String findTel1 = "010-2546-0266";
 			if (ht.contains(findTel1))
 			{
-				System.out.println(findTel1 + "데이터가 존재합니다.");
+				System.out.println(findTel1 + " 데이터가 존재합니다.");
 			}
 			else
 			{
@@ -139,6 +142,7 @@ public class Test170
 			System.out.println();
 		
 			// ※ null관련 처리  → null 아무것도없는 상태값
+			//왜냐하면 Hashtable은 null허용하지않으니까
 			//ht.put(null, null);				//--key, value 모두 null
 			//에러발생( 런타임 에러)
 			//--==>>NullPointerException
@@ -158,6 +162,7 @@ public class Test170
 			//--==>>010-1111-1111
 			//중복된 key를 활용하여 데이터를 입력할 경우
 			//기존 "010-2546-0266"에서 010-1111-1111 로 변경되었음을 확인
+			
 
 
 			//중복된 value 입력
@@ -167,7 +172,8 @@ public class Test170
 			System.out.println(ht.get("김태민"));
 			//--==>>010-7202-6306
 
-			//value는 중복된값이 입력되더라고 기존데이터에 아무런 영향을 미치지 않음
+			//value는 중복된값이 입력되더라도 기존데이터에 아무런 영향을 미치지 않음
+			//너는 값은 뭐 다를수있어 내가 변경해줄게 근데 키는 유일해
 
 		}
 }

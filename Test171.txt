@@ -1,0 +1,76 @@
+Map     Hashtable, HashMap
+
+java.util.Map 인터페이스는 
+키 를 값에 매핑 해야하며
+동일한키를 등록할 수 없고 유일해야하며
+각 키는 한개의 값만응 매핑해야한다.
+즉, 하나의 키에 대응하는 하나의 값을 갖는 자료구조이다. 쌍쌍으로
+
+HashMap<K,V> 클래스
+Hashtable 클래스와 마찬가지로 Map인터페이스에서 상속받은
+HashMap 클래스의 기능은 Hashtable 과 동일하지만 
+동시성 문제가 없다면
+HashMap 을 사용하는것이 성능을 향상 시킬 수 있다.
+
+또한, HashMap은 Hashtable 클래스와 달리 null을 허용한다.
+
+public class Test171
+{
+	public static void main(String[] args) throws IOException
+	{
+		Map<String,String> map = new HashMap<Stirng, String>();
+
+		//map이라는 Hashtable 자료구조에 요소 추가
+		//put();
+		map.put("영화","범죄도시");
+		map.put("드라마","이태원클라스");
+		map.put("만화","슬램덩크");
+
+		System.out.println(map)
+		//더미확인 
+		데이터 매핑구조를 확이해보면
+		데이터 격납 순서가 추가한 순서와 과계가 없다.
+		식별은 key로 한다. 키는 앞에 값 영화 드라마 만화
+
+		//key와 value 모두 null일때
+		map.put(null,null);
+
+		System.out.println(map);
+		{null=null} 값으로 인정
+
+		value가 null
+		map.put("동화",null);
+		System.out.println(map);
+		{동화=null} 값으로 인정 HashMap이
+
+		key가 null
+		map.put(null,"아다지오");
+
+		System.out.println(map);
+		//{null=모나리자}
+
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String[] temp;
+
+		for(String str;(str = br.readLine() != null;)
+		{
+			temp = str.split(",");
+			if(temp.length<2)
+			{
+				System.out.print("카테고리, 타이틀(컴마 구분) : ");
+				continue;
+
+			}
+			map.put(temp[0].trim(), temp[1].trim());
+			System.out.println(map);
+		}
+		
+
+
+
+
+
+
+	}
+}
