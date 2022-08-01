@@ -7,7 +7,7 @@
  - 배열과 유사
  - 중복을 허용
 
- ○ArrayList 클래스 사용빈도 많음 대표적
+ ○ArrayList 클래스 사용 빈도 많음 대표적
 
  - ArratList 와 Vector 클래스는 
 	List 를 크기 변경이 가능한 배열로 구현한 것으로

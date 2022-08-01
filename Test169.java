@@ -25,7 +25,7 @@ import java.util.Comparator;
 
 class GradeVO
 {
-	//주요 속성수성
+	//주요 속성 구성
 	private String hak;				//학번
 	private String name;			//이름
 	private int kor, eng, mat;		//국어, 영어 수학점수
@@ -100,6 +100,15 @@ class GradeVO
 		//return kor + eng + mat; ↓ 같은 구문
 		return this.kor + this.eng + this.mat;
 	}
+
+
+	//만약에 평균 산출이면,,?????????? 성공
+	public int getAvg()
+	{
+		return (this.kor + this.eng + this.mat)/3;
+	}
+
+
 }
 
 class MyComparator<T> implements Comparator<T>
@@ -140,7 +149,7 @@ class MyComparator<T> implements Comparator<T>
 			//return 정수형;
 			return s1.getName().compareTo(s2.getName());
 				 //---
-			  //Grade VO
+			  //GradeVO
 				  //-----------
 				    //String
 			
@@ -149,7 +158,7 @@ class MyComparator<T> implements Comparator<T>
 			//return s1.getName().compareTo(s2.getName());
 
 			//이름기준 (내림차순)
-			return s2.getName().compareTo(s1.getName());
+			//return s2.getName().compareTo(s1.getName());
 	}
 
 }
@@ -170,7 +179,7 @@ public class Test169
 		set.add("디지몬 어드벤처");
 		set.add("이웃집 토토로");
 		set.add("짱구는 못말려");
-		set.add("아기공룡 두릴 얼음별 대모험");
+		set.add("아기공룡 둘리 얼음별 대모험");
 		set.add("러브 라이브");
 		
 
@@ -179,7 +188,7 @@ public class Test169
 		Iterator<String> it = set.iterator();
 		while (it.hasNext())
 		{
-			System.out.print(it.next() + " ");
+			System.out.print(it.next() + ",");
 		}
 		System.out.println();
 
@@ -255,22 +264,25 @@ public class Test169
 		System.out.println();
 */		
 
+
 		Iterator<GradeVO> it2 = set2.iterator();
 		while (it2.hasNext())
 		{
 			GradeVO	vo = it2.next();
-			System.out.printf("%7s %7s %4d %4d %4d %6d\n"
+			System.out.printf("%7s %7s %4d %4d %4d %6d %6d\n"
 							,vo.getHak(), vo.getName() 
 							,vo.getKor(), vo.getEng() ,vo.getMat()
-							,vo.getTot());
+							,vo.getTot(), vo.getAvg());
 		}
 		System.out.println();
+
+
 /*
 		Iterator<GradeVO> it1 = set2.iterator();
 		while (it1.hasNext())
 		{
 			GradeVO vo = it1.next();
-			System.out.println(vo.getHak() + vo.getName() + vo.getKor() + vo.getEng() + vo.getMat());
+			System.out.println(vo.getHak() +" "+ vo.getName() +" "+ vo.getKor() +" "+ vo.getEng() +" "+ vo.getMat());
 		}
 		System.out.println();
 		
