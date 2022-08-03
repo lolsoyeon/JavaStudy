@@ -39,6 +39,7 @@
 	통신 구조를 지원하는 개념으로 이해하면 좋겠다.
 
  ※ Bean(빈)
+
 	C/S 구조적 모델에서 서버측 구조에 해당하며,
 	재사용 가능한 소프트웨어 개체를 만들수 있게 하는 컴포넌트(호환) 기술
 	작성된 개체의 공유가 가능 하며 프로젝트에 쉽게 포함시킬 수 있도록 한다.
@@ -227,42 +228,50 @@ public class Test177
 
 			fis.close();
 			//--fis,FileInputStream 리소스 반납
+			
 
-
+			//-------------------여기까지 수행하면 읽어들이는 작업 끝~!~!
 
 			//읽어들인 h2 객체 내용 확인
 
 			String key;
 			String value;
 
-			//Itertaor 사용할 수 없음
+			//※ Itertaor 사용할 수 없음
 			Enumeration e = h2.keys();
 
 			while (e.hasMoreElements())
 			{
 				key = (String)e.nextElement();
 			//-- Hashtable 자료구조를 대상으로 key 값을 읽어들이는 과정
-			}
-			System.out.println(key); //?????
+			
+			System.out.println(key); 
 
+			/*
+			2206512
+			2206524
+			2206436
+			2206537
+			2206428
+			*/
 
 
 			value = (String)h2.get(key);
+
 			//-- Hashtable 자료구조를 대상으로 key 를 활용하여 value 를 읽어들이는 과정
 
-			System.out.println(key + "→" + value);
+			//System.out.println(key + " → " + value);
+
+			/*
+			2206512 → 임시연
+			2206524 → 한은영
+			2206436 → 유동현
+			2206537 → 조현하
+			2206428 → 엄소연
+			*/
+			}
 
 		}
-
-
-
-
-
-
-
-
-
-
 
 	}
 }
