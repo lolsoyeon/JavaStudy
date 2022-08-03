@@ -16,7 +16,7 @@
 */
 
 //VO - Value Object					//비지니스 로직 포함
-//DTO - Data Transfer Object		// a->b 건네기 손에있는것 
+//DTO - Data Transfer Object		// a-> b 건네기 손에있는것 
 //DAO - Data Access Object			//어디어디에 넣어줘
 
 import java.util.TreeSet;

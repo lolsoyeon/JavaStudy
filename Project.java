@@ -36,7 +36,7 @@ public class Project
 		{
 			 System.out.println("==========================");
 			 System.out.println("관리자 페이지 입니다.");
-			 System.out.println("1: 메뉴변경 2 :가격변경 3: 재고추가 4: 메뉴추가 5: 수익 확인 (종료는 -1)");
+			 System.out.println("1: 메뉴변경  2 :가격변경  3: 재고추가  4: 메뉴추가  5: 수익 확인 (종료는 -1)");
 			 System.out.println("번호를 입력하세요: ");
 			
 			int num = sc.nextInt();
@@ -71,6 +71,7 @@ public class Project
 				price[i-1] = j;
 				System.out.print("가격 변경이 완료되었습니다!");
 			}
+
 			//3. 재고 추가
 			else if (num == 3)
 			{
@@ -136,10 +137,12 @@ public class Project
 			{
 				System.out.println("===================================");
 				System.out.println("꽃 자판기 입니다.(번호: 상품(재고))");
+
+
 				//번호 : 메뉴(가격)- 재고출력
 				for (int i = 0;i<count ;i++ )
 				{
-					System.out.print((i+1) + ": " +box[i] +"(" + price[i] + "W)-" + stock[i] + "개   ");
+					System.out.print((i+1) + ": " +box[i] +"(" + price[i] + "W)-" + stock[i] + " 개   ");
 				}
 				System.out.println();
 				System.out.println("=====================================");
@@ -205,7 +208,7 @@ public class Project
 					System.out.print("돈을 넣어주세요 : ");
 					int extra = sc.nextInt();
 					money += extra;
-					System.out.println("금액이 추가되었습니다! 잔액: " +money);
+					System.out.println("금액이 추가되었습니다! 잔액: " + money);
 				}
 				else if (num1 == 3)
 				{
