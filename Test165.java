@@ -55,7 +55,7 @@ public class Test165
 		List<String> list3 = new ArrayList<String>();
 
 		//list 3에 list2의 전체요소 추가 addAll()
-		list3.addAll(list2);		//반복문안쓰고 한번넘기면 추가가된다
+		list3.addAll(list2);		//반복문안쓰고 한 번 넘기면 추가가된다
 
 
 		//"탑건2" 앞에 "레미제라블" 추가해보기

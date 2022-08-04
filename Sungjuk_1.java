@@ -134,7 +134,7 @@ public class Sungjuk
 	//④ 석차 산출 메소드 추가
 	//	- 산출 과정에서 연산에 필요한 데이터가 이미 존재하는 상황 → 매개변수 필요없음
 	//	Record 배열의 rank 속성 초기화 기능 수행 → 반환자료형 void
-	// 클래스 내부에서 활용할 메소드로 정의 → 접근제어 지시다 private
+	// 클래스 내부에서 활용할 메소드로 정의 → 접근제어 지시자 private
 
 	private void ranking()
 	{
@@ -149,11 +149,11 @@ public class Sungjuk
 			for (int j = i+1;j<inwon; j++)		//왜 인원까지일까???
 												//쑝→ 비교대상 1234 234  34  4
 			{
-				if (rec[i].avg> rec[j].avg) //비교기준의 평균이 비교대상의 평균보다 크다면 
+				if (rec[i].avg> rec[j].avg) //비교기준의 평균이 비교 대상의 평균보다 크다면 
 				{
 					rec[j].rank++;	//비교 대상의 rank를 1만큼 증가
 				}
-				else if (rec[j].avg > rec[i].avg)	
+				else if (rec[j].avg > rec[i].avg)
 				//비교대상의 평균이 비교기준의 평균보다 크다면
 				{
 					rec[i].rank++:	//비교기준의 rank 를 1만큼 증가
