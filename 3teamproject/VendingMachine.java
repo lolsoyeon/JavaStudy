@@ -1,6 +1,6 @@
-//¼Ó¼º + ±â´É Å¬·¡½º ¼±¿¡¼­ °­Á¶
-//ÇÕÃÄ¼­ ¾²¸é ÀÚ·á±¸Á¶ ÇÊ¿ä(ÇöÀç ´Ü°è¿¡¼± ÀÚ·á±¸Á¶ °í·Á ¾ÈÇÔ)
-//¡Úmoney¶û coinÀÌ¶ó´Â º¯¼öÀÌ¸§ Á¶½ÉÇØ¾ßÇÔ¡Ú 
+//ï¿½Ó¼ï¿½ + ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½Ä¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·á±¸ï¿½ï¿½ ï¿½Ê¿ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½Ü°è¿¡ï¿½ï¿½ ï¿½Ú·á±¸ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+//ï¿½ï¿½moneyï¿½ï¿½ coinï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½Ô¡ï¿½ 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,48 +8,48 @@ import java.util.Scanner;
 public class VendingMachine
 {
 	public MoneyInsert moneyinsert;
-	//ÁÖ¿ä º¯¼öµé ¼±¾ð
+	//ï¿½Ö¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	private List<Items> items ;
 	private int amount = 5;
 	private int total = 0;
 	private Sales sales;
 
-	//±Ý¾× Áý¾î³Ö±â ½ÇÇà Å×½ºÆ®
-	//"ÃÑ ±Ý¾×ÀÌ ¾ó¸¶ÀÎ°Ô ¸Â½À´Ï±î ?" profit 
-	//¹êµù ¸Ó½Å¿¡¼­ Àç°í °ü¸® ¹× µ· °ü¸® ??????????????
+	//ï¿½Ý¾ï¿½ ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®
+	//"ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Â½ï¿½ï¿½Ï±ï¿½ ?" profit 
+	//ï¿½ï¿½ï¿½ ï¿½Ó½Å¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ??????????????
 	//System.out.println("S" + size[0]);
 	
-	//ÇÙ½É
+	//ï¿½Ù½ï¿½
 	public VendingMachine()
 	{	
-		//List ÀÎµ¦½º·Î ÀÌ°ÍµéÀ» Á¢±ÙÇÒ ¼ö ÀÖ°Ô µÊ
-		items = new ArrayList<>();		//¼±¾ð ÀÌÀ¯
-		items.add(new Clothes(1, "¹Î¼Ò¸Å", 5000, new int[]{5,5,5}));
-		items.add(new Clothes(2, "¹ÝÆÈ", 15000, new int[]{5,5,5}));
-		items.add(new Clothes(3, "ÄÚÆ®", 50000, new int[]{5,5,5}));
-		items.add(new Clothes(4, "ÆÐµù", 100000, new int[]{5,5,5}));
-		items.add(new Clothes(5, "È÷Æ®ÅØ»óÀÇ", 10000, new int[]{5,5,5}));
-		items.add(new Clothes(6, "¹Ý¹ÙÁö", 15000, new int[]{5,5,5}));
-		items.add(new Clothes(7, "±ä¹ÙÁö", 20000, new int[]{5,5,5}));
-		items.add(new Clothes(8, "±â¸ð¹ÙÁö", 30000, new int[]{5,5,5}));
-		items.add(new Clothes(9, "³ÃÀå°í¹ÙÁö", 10000, new int[]{5,5,5}));
-		items.add(new Clothes(10, "È÷Æ®ÅØÇÏÀÇ", 10000, new int[]{5,5,5}));
-		items.add(new Accessories(11, "¿ì»ê", 3000,amount));
-		items.add(new Accessories(12, "¸ðÀÚ", 15000,amount));
-		items.add(new Accessories(13, "¸ñµµ¸®", 15000,amount));
-		items.add(new Accessories(14, "Àå°©", 10000,amount));
-		items.add(new Accessories(15, "¼±±Û¶ó½º", 30000,amount));
+		//List ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì°Íµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½
+		items = new ArrayList<>();		//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		items.add(new Clothes(1, "ï¿½Î¼Ò¸ï¿½", 5000, new int[]{5,5,5}));
+		items.add(new Clothes(2, "ï¿½ï¿½ï¿½ï¿½", 15000, new int[]{5,5,5}));
+		items.add(new Clothes(3, "ï¿½ï¿½Æ®", 50000, new int[]{5,5,5}));
+		items.add(new Clothes(4, "ï¿½Ðµï¿½", 100000, new int[]{5,5,5}));
+		items.add(new Clothes(5, "ï¿½ï¿½Æ®ï¿½Ø»ï¿½ï¿½ï¿½", 10000, new int[]{5,5,5}));
+		items.add(new Clothes(6, "ï¿½Ý¹ï¿½ï¿½ï¿½", 15000, new int[]{5,5,5}));
+		items.add(new Clothes(7, "ï¿½ï¿½ï¿½ï¿½ï¿½", 20000, new int[]{5,5,5}));
+		items.add(new Clothes(8, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 30000, new int[]{5,5,5}));
+		items.add(new Clothes(9, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 10000, new int[]{5,5,5}));
+		items.add(new Clothes(10, "ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 10000, new int[]{5,5,5}));
+		items.add(new Accessories(11, "ï¿½ï¿½ï¿½", 3000,amount));
+		items.add(new Accessories(12, "ï¿½ï¿½ï¿½ï¿½", 15000,amount));
+		items.add(new Accessories(13, "ï¿½ñµµ¸ï¿½", 15000,amount));
+		items.add(new Accessories(14, "ï¿½å°©", 10000,amount));
+		items.add(new Accessories(15, "ï¿½ï¿½ï¿½Û¶ï¿½", 30000,amount));
 		moneyinsert  = new MoneyInsert() ;
 		sales = new Sales(items);
 	}
 	public List<Items> getItems() {return this.items;}
 	public boolean buy(int itemId) {
-		// µ· Ã¼Å© ºÎÅÍ
+		// ï¿½ï¿½ Ã¼Å© ï¿½ï¿½ï¿½ï¿½
 		this.items.get(itemId).setAmount();
 		return true ;
 	}
 	public int pay(int totalprice) {
-		// µ· Ã¼Å© ºÎÅÍ
+		// ï¿½ï¿½ Ã¼Å© ï¿½ï¿½ï¿½ï¿½
 		int remain = this.moneyinsert.setSum_coin(totalprice);
 		
 		return remain;

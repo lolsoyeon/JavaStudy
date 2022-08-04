@@ -1,7 +1,7 @@
 import java.io.IOException;
 public interface Mode
 {
-	public abstract void display();							//¸Þ´ºÆÇÀ» º¸¿©Áà¾ß ÇÑ´Ù 
-	//public abstract void select()throws IOException;		//°ü¸®ÀÚ¸ðµå¿¡¼­ ¼±ÅÃÇÏ´Â ±â´É... ÀÔ·ÂÀ» ¹Þ°í ¼±ÅÃÇÏ´Â ±â´ÉÀ» °¡Áö°í ÀÖÀ½
+	public abstract void display();							//ï¿½Þ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½ 
+	//public abstract void select()throws IOException;		//ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½... ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½Þ°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public abstract boolean select()throws IOException;		
 }

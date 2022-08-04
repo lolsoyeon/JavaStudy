@@ -1,4 +1,4 @@
-public class Accessories implements Items //ÀâÈ­
+public class Accessories implements Items //ï¿½ï¿½È­
 { 
 	int itemId;
 	String name;
@@ -12,21 +12,21 @@ public class Accessories implements Items //ÀâÈ­
         this.price = price;
 		this.amount = amount;
 	}
-	public void fill(){ //ºÎÁ·ÇÑ Àç°í¸¦ ÆÄ¾ÇÇØ¼­ Maximum(10)±îÁö ÇÑ¹ø¿¡ Ã¤¿öÁÖ´Â ±â´ÉÀ» ´ã´çÇÏ´Â ¸Þ¼Òµå
+	public void fill(){ //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ø¼ï¿½ Maximum(10)ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
 		this.amount = amount + 5 ;
 	}
-	public String getName(){return name;}		//NameÀ» ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
-	public int getPrice(){return price;}		//Price¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
-	public int getAmount(){	return amount;}      //Amount¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ
+	public String getName(){return name;}		//Nameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+	public int getPrice(){return price;}		//Priceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+	public int getAmount(){	return amount;}      //Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½
 	public void setAmount(){					
 		
 			if (this.amount==0)
 			{
-				System.out.println("<<Ç°Àý>> ±¸¸Å ºÒ°¡´É ÇÕ´Ï´Ù.");
+				System.out.println("<<Ç°ï¿½ï¿½>> ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.");
 			}
 			else {
 				this.amount = amount - 1;
 			}
 	
-	} //Amount¸¦ ¼³Á¤ ÇÏ´Â ÇÔ¼ö(-1 ÇØÁÜ)
+	} //Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½(-1 ï¿½ï¿½ï¿½ï¿½)
 }

@@ -8,7 +8,7 @@ public class RpsGame
 	private int admin = 0;
 	private int price = 0;
 	
-	// 5¸¸¿ø ÀÌ»óÀÏ¶§ °ÔÀÓ ½ÇÇàÇÏ±â
+	// 5ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ï¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
 	public void gameStart(int total)
 	{
 		price = total;
@@ -17,14 +17,14 @@ public class RpsGame
 			if (total >= 50000)
 			{
 
-			System.out.println("¡á¡á¡á 50,000¿ø ÀÌ»ó ±¸¸Å½Ã Âü¿© °¡´ÉÇÑ ÀÌº¥Æ®~!! ¡á¡á¡á");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ 50,000ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½Å½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ®~!! ï¿½ï¿½ï¿½ï¿½");
 			System.out.println();
 			break;
 			}
 			else if (total < 50000)
 			{
-			System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %d\n", total);
-			// °áÁ¦Ã¢ È£Ãâ();
+			System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %d\n", total);
+			// ï¿½ï¿½ï¿½ï¿½Ã¢ È£ï¿½ï¿½();
 			
 			System.exit(-1);
 			}
@@ -32,93 +32,93 @@ public class RpsGame
 		}
 	}
 
-	// ÄÄÇ»ÅÍÀÇ °¡À§¹ÙÀ§º¸
+	// ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private void runCom()
 	{
 		Random rd = new Random();
-		admin = rd.nextInt(3)+1;			//- (3)ÀÌ¸é 012 ÀÌ´Ï±î +1À» ÇØ¼­ 123 ¼ø¼­·Î ¸¸µç´Ù.
+		admin = rd.nextInt(3)+1;			//- (3)ï¿½Ì¸ï¿½ 012 ï¿½Ì´Ï±ï¿½ +1ï¿½ï¿½ ï¿½Ø¼ï¿½ 123 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
 	}
 
-	// À¯ÀúÀÇ °¡À§¹ÙÀ§º¸
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void input()
 	{
-		// À¯Àú°¡ °¡À§¹ÙÀ§º¸ ÇÏ±â Àü¿¡... ÄÄÇ»ÅÍ(ÁÖÃÖÃø) ¸ÕÀú °¡À§¹ÙÀ§º¸
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½... ï¿½ï¿½Ç»ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		runCom();
 
 		Scanner sc = new Scanner(System.in);
 
 		do
 		{
-			System.out.print("(1)°¡À§ (2)¹ÙÀ§ (3)º¸ Áß ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä(1~3) : ");
+			System.out.print("(1)ï¿½ï¿½ï¿½ï¿½ (2)ï¿½ï¿½ï¿½ï¿½ (3)ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½(1~3) : ");
 			user = sc.nextInt();
 		}
 		while (user < 1 || user > 3);
 
 	}
 
-	// Áß°£ °á°ú Ãâ·Â
+	// ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void middleCalc()
 	{
-		String[] str = {"°¡À§","¹ÙÀ§","º¸"};
+		String[] str = {"ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½"};
 
 		System.out.println();
-		System.out.println(" ¡Ú±¸¸ÅÀÚ : " + str[user-1]);
-		System.out.println(" ¡Ú°ü¸®ÀÚ : " + str[admin-1]);
+		System.out.println(" ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½ : " + str[user-1]);
+		System.out.println(" ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½ : " + str[admin-1]);
 		System.out.println();
 	}
 
-	// ½ÂºÎ¿¡ ´ëÇÑ ÃÖÁ¾ °á°ú ¿¬»ê
+	// ï¿½ÂºÎ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public void resultCalc()
 	{
 		//int local_admin;
-		// (À¯Àú=="°¡À§"&& ÄÄÇ»ÅÍ=="°¡À§")||(À¯Àú=="¹ÙÀ§"&& ÄÄÇ»ÅÍ=="¹ÙÀ§")||(À¯Àú=="º¸"&& ÄÄÇ»ÅÍ=="º¸")
+		// (ï¿½ï¿½ï¿½ï¿½=="ï¿½ï¿½ï¿½ï¿½"&& ï¿½ï¿½Ç»ï¿½ï¿½=="ï¿½ï¿½ï¿½ï¿½")||(ï¿½ï¿½ï¿½ï¿½=="ï¿½ï¿½ï¿½ï¿½"&& ï¿½ï¿½Ç»ï¿½ï¿½=="ï¿½ï¿½ï¿½ï¿½")||(ï¿½ï¿½ï¿½ï¿½=="ï¿½ï¿½"&& ï¿½ï¿½Ç»ï¿½ï¿½=="ï¿½ï¿½")
 
 		if ((user==1&& admin==3)||(user==2&& admin==1)||(user==3&& admin==2))
 		{
-		   System.out.println("½ÂºÎ °á°ú : ´ç½ÅÀÌ ½Â¸®Çß½À´Ï´Ù~!!\n");
+		   System.out.println("ï¿½Âºï¿½ ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½~!!\n");
 		   RandomBox();
 
 		   if (admin == 1)
 		   {
-			   System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %d\n", price - 1000);
+			   System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %d\n", price - 1000);
 			  
 		   }
 		   else if (admin == 2)
 		   {
-			   System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %d\n", price - 3000);
+			   System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %d\n", price - 3000);
 			  
 		   }
 		   else if (admin == 3)
 		   {
-			   System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %d\n", price - 5000);
+			   System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %d\n", price - 5000);
 			 
 		   }
 		   else
-			   System.out.println("¿À·ùÀÔ´Ï´Ù. °ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇÏ¼¼¿ä.");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
 		   
 		   /*
 		   local_admin = RandomBox();
-		   System.out.printf(">> °á°ú°ª : %d",local_admin);
+		   System.out.printf(">> ï¿½ï¿½ï¿½ï¿½ï¿½ : %d",local_admin);
 			*/
 		}
 
 		else if ((user==1&& admin==2)||(user==2&& admin==3)||(user==3&& admin==1))
 		{
-			System.out.println("½ÂºÎ °á°ú : ´ç½ÅÀÌ Á³½À´Ï´Ù. ¾Æ½±Áö¸¸ ´ÙÀ½±âÈ¸¿¡~!!\n");
-			System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %d", price);
+			System.out.println("ï¿½Âºï¿½ ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½~!!\n");
+			System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %d", price);
 			System.out.println();
 		}
 		
 		else if (user==admin)
 		{
-			System.out.println("½ÂºÎ °á°ú : ¹«½ÂºÎÀÔ´Ï´Ù. ¾Æ½±Áö¸¸ ´ÙÀ½±âÈ¸¿¡~!!\n");
-			System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %d", price);
+			System.out.println("ï¿½Âºï¿½ ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½Âºï¿½ï¿½Ô´Ï´ï¿½. ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½~!!\n");
+			System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %d", price);
 			System.out.println();
 
 		}
 	}
 
-	// ÀÌ°åÀ» ¶§ ·£´ý¹Ú½º »ý¼º ¸Þ¼Òµå
+	// ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½
 	public int RandomBox()
 	{ 
 		runCom();
@@ -128,7 +128,7 @@ public class RpsGame
 		while (true)
 		{
 			sc = new Scanner(System.in);
-			System.out.println(">> ·£´ý¹Ú½º¸¦ ¿­¾îÁÖ¼¼¿ä : [1]  [2]  [3] \n");
+			System.out.println(">> ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ : [1]  [2]  [3] \n");
 			user = sc.nextInt();
 			System.out.println();
 
@@ -138,7 +138,7 @@ public class RpsGame
 			}
 			else 
 			{
-				System.out.println("´Ù½Ã ¿­¾îÁÖ¼¼¿ä (1~3)");
+				System.out.println("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ (1~3)");
 			}
 		}
 		
@@ -150,25 +150,25 @@ public class RpsGame
 		 return();
 
 		//System.out.println(discount[num]);
-		System.out.printf("%s¿ø ÇÒÀÎ±Ç ´çÃ· !!", discount[num]);
+		System.out.printf("%sï¿½ï¿½ ï¿½ï¿½ï¿½Î±ï¿½ ï¿½ï¿½Ã· !!", discount[num]);
 		System.out.println();
 		*/
 	
 
 		if (admin == 1)
-			  System.out.print("1000¿ø ÇÒÀÎ±Ç ´çÃ· !!!\n");
+			  System.out.print("1000ï¿½ï¿½ ï¿½ï¿½ï¿½Î±ï¿½ ï¿½ï¿½Ã· !!!\n");
 			//System.out.println();
 		
 		else if (admin == 2)
-			System.out.print("3000¿ø ÇÒÀÎ±Ç ´çÃ· !!!\n");
+			System.out.print("3000ï¿½ï¿½ ï¿½ï¿½ï¿½Î±ï¿½ ï¿½ï¿½Ã· !!!\n");
 			//System.out.println();
 	
 		else if (admin == 3)
-			System.out.print("5000¿ø ÇÒÀÎ±Ç ´çÃ· !!!\n");		
+			System.out.print("5000ï¿½ï¿½ ï¿½ï¿½ï¿½Î±ï¿½ ï¿½ï¿½Ã· !!!\n");		
 		else
-			System.out.print("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
+			System.out.print("ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
 			 System.out.println();
-		// 3 ÀÌ»ó ÀÔ·Â½Ã ¶È°°ÀÌ ³ª¿È
+		// 3 ï¿½Ì»ï¿½ ï¿½Ô·Â½ï¿½ ï¿½È°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		return admin;
 
 	}

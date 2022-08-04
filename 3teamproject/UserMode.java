@@ -6,30 +6,30 @@ import java.io.InputStreamReader;
 public class UserMode implements Mode
 {
 	List<Items> items;
-	//private VendingMachine machine;		//Âü°íÇÑ ÀÚ·á¿¡¼­ privateÀ¸·Î ¼±¾ð ÇØ³õÀº ÀÌÀ¯°¡¹»±î?
+	//private VendingMachine machine;		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·á¿¡ï¿½ï¿½ privateï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 	VendingMachine machine;
 	Scanner sc = new Scanner(System.in);
 	int coin = 0;
 	int remain = 0;
 	RpsGame ob;
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	public UserMode(VendingMachine vendingmachine) { // »ì¾ÆÀÖ´Â °´Ã¼¸¦ ÄÁÆ®·Ñ ÇÏ±âÀ§ÇØ ³Ñ°ÜÁÖ°í ¹Þ°í ÇÔ
+	public UserMode(VendingMachine vendingmachine) { // ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ï¿½Ö°ï¿½ ï¿½Þ°ï¿½ ï¿½ï¿½
 		machine = vendingmachine;		//this.machine=vendingmachine; items = this.machine.getItems();
-		items = machine.getItems();			//	VendingMachine¿¡ ÀÖ´Â Items¸¦ °¡Á®¿Â´Ù  »ì¾ÆÀÖ´Â °´Ã¼¸¦ ÄÁÆ®·Ñ ÇÏ±âÀ§ÇØ ³Ñ°ÜÁÖ°í ¹Þ°í ÇÔ
-	} // »ý¼ºÀÚ										ÀÌ°Ô ¾øÀ¸¸é °ü¸®ÀÚ ¸ðµå¿¡¼­ ³Ñ±æ ¼ö °¡ ¾øÀ½  ¡ç °ü¸®ÀÚ¿¡¼­ ¹Þ¾Æ ¿Ã ¼ö°¡ ¾øÀ½
+		items = machine.getItems();			//	VendingMachineï¿½ï¿½ ï¿½Ö´ï¿½ Itemsï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½  ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ï¿½Ö°ï¿½ ï¿½Þ°ï¿½ ï¿½ï¿½
+	} // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½										ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½Ñ±ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½Þ¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	
 
 	public void display(){
-		items = machine.getItems();	//	VendingMachine¿¡ ÀÖ´Â Items¸¦ °¡Á®¿Â´Ù	//this.machine.getItems();
+		items = machine.getItems();	//	VendingMachineï¿½ï¿½ ï¿½Ö´ï¿½ Itemsï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½	//this.machine.getItems();
 		System.out.println("==============================================================================================================================");
-		System.out.println("ÀÇ·ùÀâÈ­ ÀÚÆÇ±â ÀÔ´Ï´Ù. (¹øÈ£:»óÇ°(Àç°í))");
-		System.out.println("\t\t\t\t\t\t[»óÀÇ]");
+		System.out.println("ï¿½Ç·ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½Ç±ï¿½ ï¿½Ô´Ï´ï¿½. (ï¿½ï¿½È£:ï¿½ï¿½Ç°(ï¿½ï¿½ï¿½))");
+		System.out.println("\t\t\t\t\t\t[ï¿½ï¿½ï¿½ï¿½]");
 		for (int i=0; i<5; i++)
 			{
 			/*System.out.println((i+1)+"."+items.get(i).getName()+"      "+"("+items.get(i).getPrice()+")"+"  - "
 			+"(S:"+items.get(i).getSize(0)+" M:"+items.get(i).getSize(1)+" L:"+items.get(i).getSize(2)+")");*/
-			Clothes item = (Clothes)items.get(i) ; //´Ù¿î Ä³½ºÆÃ
-			//¼³Á¤µÈ Size°ª ¶§¹®¿¡ Clothes¿¡¼­ °¡Á®¿Í¼­ »ç¿ë
+			Clothes item = (Clothes)items.get(i) ; //ï¿½Ù¿ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Sizeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Clothesï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½ï¿½ï¿½
 			System.out.printf("%2d. %s(%d) - (S:%d M:%d L:%d)", (i+1),  item.getName(), item.getPrice(), item.getSize(0), item.getSize(1), item.getSize(2));
 			if (i==2)
 			{
@@ -44,7 +44,7 @@ public class UserMode implements Mode
 		System.out.println();
 
 		System.out.println();
-		System.out.println("\t\t\t\t\t\t[ÇÏÀÇ]");
+		System.out.println("\t\t\t\t\t\t[ï¿½ï¿½ï¿½ï¿½]");
 		for (int i=5; i<10; i++)
 		{
 			Clothes item = (Clothes)items.get(i) ;
@@ -72,10 +72,10 @@ public class UserMode implements Mode
 		System.out.println();
 		
 		System.out.println();
-		System.out.println("\t\t\t\t\t\t[ÀâÈ­]");
+		System.out.println("\t\t\t\t\t\t[ï¿½ï¿½È­]");
 		for (int i=10; i<15; i++)
 		{	
-			//ÀâÈ­¿¡ ÀÖ´Â Ä£±¸µéÀÌ±â ¶§¹®¿¡ ±»ÀÌ ´Ù¿îÄ³½ºÆÃÇØ¼­ ºÒ·¯¿Ã ÇÊ¿ä°¡ ¾øÀ½
+			//ï¿½ï¿½È­ï¿½ï¿½ ï¿½Ö´ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½Ê¿ä°¡ ï¿½ï¿½ï¿½ï¿½
 			System.out.printf("%2d. %s(%d) - (%d)", (i+1),  items.get(i).getName(), items.get(i).getPrice(), items.get(i).getAmount() );
 			if (i==12)
 			{
@@ -93,12 +93,12 @@ public class UserMode implements Mode
 		}
 		System.out.println();
 		System.out.println("==============================================================================================================================");
-	}	//¸Þ´ºÆÇÀ» º¸¿©Áà¾ß ÇÑ´Ù
+	}	//ï¿½Þ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½
 	public boolean select() throws IOException {
 		int itemId;
 		boolean flag = true;
 		do {
-			System.out.print("¹«¾ùÀ» ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?");
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?");
 			String check = sc.next();
 			if (check.equals("java006$"))
 			{
@@ -109,20 +109,20 @@ public class UserMode implements Mode
 				itemId = Integer.parseInt(check);
 			}
 			if (itemId > 0 && itemId <= 15) {
-				//items.get(itemId).getAmount();		//S/M/L¼³Á¤
+				//items.get(itemId).getAmount();		//S/M/Lï¿½ï¿½ï¿½ï¿½
 				coin += machine.getInsert();
 				while (coin < machine.getItemIdPrice(itemId-1)){
-					System.out.println("±Ý¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ±Ý¾×À» ´õ ÅõÀÔÇØÁÖ¼¼¿ä.");
+					System.out.println("ï¿½Ý¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. ï¿½Ý¾ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 					coin += machine.getInsert();
 				}
 				//this.machine.buy(itemId - 1);
 				//this.machine.setTotal(this.machine.getItemIdPrice(itemId-1));	// 
-				//this.machine.getSales().countId(itemId-1);						//·©Å·  
+				//this.machine.getSales().countId(itemId-1);						//ï¿½ï¿½Å·  
 				machine.buy(itemId - 1);
 				machine.setTotal(this.machine.getItemIdPrice(itemId-1));
 				machine.getSales().countId(itemId-1);
 				System.out.println();
-				System.out.print("Ãß°¡ ±¸¸Å ÇÏ½Ã°Ú½À´Ï±î? (Y/N) : ");
+				System.out.print("ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? (Y/N) : ");
 				String check2 = sc.next();
 				if (check2.equals("N") || check2.equals("n")) {
 					remain += receipt();
@@ -135,11 +135,11 @@ public class UserMode implements Mode
 					flag = true;
 				}
 			} else {
-				System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½. ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 			}
 		}while (flag) ;
 		return true;
-	}  //ÀÔ·ÂÀ» ¹Þ°í ÀÔ·Â¿¡ µû¸¥ ³»ºÎÀûÀ¸·Î ±â´É È£Ãâ
+	}  //ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½Þ°ï¿½ ï¿½Ô·Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È£ï¿½ï¿½
 
 	public int receipt() throws IOException{
 		ob = new RpsGame(this.machine.getSales());
@@ -147,17 +147,17 @@ public class UserMode implements Mode
 			{
 			String user ;
 			
-			System.out.printf(">>> °í°´´ÔÀÌ ±¸¸ÅÇÏ½Å »óÇ°ÀÇ ÃÑ ±Ý¾×Àº %d ÀÔ´Ï´Ù.", machine.totalReturn());
-			// ´©Àû ±Ý¾× ÇØ°áÇÏ±â
+			System.out.printf(">>> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ %d ï¿½Ô´Ï´ï¿½.", machine.totalReturn());
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ ï¿½Ø°ï¿½ï¿½Ï±ï¿½
 			System.out.println();
-			System.out.print("°áÁ¦ ÇÏ½Ã°Ú½À´Ï±î? (Y/N) : ");
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? (Y/N) : ");
 			
 			user = sc.next();
-			// y ÀÔ·Â½Ã ÀÌº¥Æ®·Î ³Ñ¾î°¡±â
+			// y ï¿½Ô·Â½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½
 			if (user.equals("y") || user.equals("Y"))
 			{
 				int discount = 0;
-				boolean start = ob.gameStart(machine.totalReturn());		// ÀÏÁ¤ ¸ÅÃâ ´Þ¼º ½Ã ÀÌº¥Æ® Ãâ·Â
+				boolean start = ob.gameStart(machine.totalReturn());		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½
 				if (start)
 				{
 					ob.input();
@@ -165,23 +165,23 @@ public class UserMode implements Mode
 					discount = ob.resultCalc();
 				}
 
-				System.out.printf("ÃÖÁ¾ °áÁ¦ ±Ý¾×Àº : %dÀÔ´Ï´Ù.\n",machine.totalReturn()-discount);
+				System.out.printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ : %dï¿½Ô´Ï´ï¿½.\n",machine.totalReturn()-discount);
 				remain = machine.pay(machine.totalReturn()-discount);
 				machine.returnRemainMoney(remain);
-				System.out.print("ÀÌÀüÈ­¸éÀ¸·Î µ¹¾Æ°¡·Á¸é ¾Æ¹«Å°³ª ÀÔ·ÂÇÏ¼¼¿ä.......");
+				System.out.print("ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.......");
 				String anykey = br.readLine();
 				return 0;
 			}
 			else if (user.equals("n") || user.equals("N"))
 			{
 				remain += machine.totalReturn();
-				System.out.print("ÀÌÀüÈ­¸éÀ¸·Î µ¹¾Æ°¡·Á¸é ¾Æ¹«Å°³ª ÀÔ·ÂÇÏ¼¼¿ä.......");
+				System.out.print("ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.......");
 				String anykey = br.readLine();
 				return remain;
 			}
 		
 		 }
-	   } // Ãß°¡ ±¸¸Å , ÇÕ°è ¸Þ¼Òµå
+	   } // ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ , ï¿½Õ°ï¿½ ï¿½Þ¼Òµï¿½
 
 }
 	
