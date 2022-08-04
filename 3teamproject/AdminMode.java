@@ -52,6 +52,7 @@ public class AdminMode implements Mode
 		{
 			
 			//profit -= 할인액;
+			//profit = 10 * 3
 			//System.out.println("현재까지의 수익은 " + profit + "입니다.");
 			 
 		}
@@ -104,7 +105,7 @@ public class AdminMode implements Mode
 	 //②관리자모드에서 재고를 추가할 때는 (부족한 항목에 대해서) 한 번에 맥스 값을 주도록 설정
 
 	
-//2. (매출 클래스에서                  매출 관련 기능 호출)
+//2. (매출 클래스에서        매출 관련 기능 호출)
 
 
 //3. (랭킹 클래스에서 매출 관련 기능 호출)
