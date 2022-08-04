@@ -1,6 +1,17 @@
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+//Map 자료구조 를 통해 key엔 아이템명 value엔 사이즈를 표기한다.
+
+
 //속성
+//멤버변수(member variable), 특성(attribute), 필드(field), 상태(state)
+//-기능(function )
+//메서드(method), 함수(function), 행위(behavior)
+
+
 public class VandingMachine_1
 {
 	public 
@@ -27,7 +38,7 @@ public class AdminMode
 	//종료 System.exit(-1);
 	public static void exit() throws IOException
 	{
-		System.out.println("다시 시작합니다!")
+		System.out.println("처음부터 다시 시작합니다!")
 		System.exit(-1);
 	}
 
@@ -51,10 +62,11 @@ public class stock
 public class Ranking
 {
 	//랭킹조회
+
 }
 public class profit
 {
-	//이익 
+	//현재 매출
 }
 public class Event
 {
@@ -66,7 +78,15 @@ public class Items
 }
 public class UserMode
 {
-
+	//사용자에게 메뉴 (출력/재고) 보이도록
+	 public Machine() {하는 메소드
+        items = new ArrayList<>();
+						//번호 품명 가격  s개수 m개수 l개수
+        items.add(new Item(1, ": 민소매", 5000, 10,10, 10));
+        items.add(new Item(2, ": 반팔", 15000, 10, 10, 10));
+        items.add(new Item(3, ": 코트", 50000, 10, 10, 10));
+        items.add(new Item(4, ": 패팅", 100000, 10, 10, 10));
+        items.add(new Item(5, ": 히트텍 상의",10000, 10, 10, 10));
 	//사용자에게 메뉴 (출력/재고) 보이도록
 	//상품을 선택 받는 기능의 메소드 구현
 	//금액을 투입 받는 프로세스
@@ -102,9 +122,6 @@ public class () extends 상의/하의
 public class 패딩() extends 상의/하의
 {
 }
-public class 잡화
+public class variety
 {
 }
-
-public 
-

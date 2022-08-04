@@ -1,5 +1,8 @@
 
 //속성
+//멤버변수(member variable), 특성(attribute), 필드(field), 상태(state)
+//-기능(function )
+//메서드(method), 함수(function), 행위(behavior)
 public class VandingMachine_1
 {
 	
