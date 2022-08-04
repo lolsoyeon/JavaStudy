@@ -103,7 +103,7 @@ public class EventGame
 	ob.input();
 	ob.middleCalc();
 	String result = ob.resultCalc();
-	//ob.print(result);
+	ob.print(result);
 		
 
 	}
