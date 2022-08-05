@@ -87,10 +87,10 @@ public class Test1060
 		//								---check~!
 		
 
-		//곱셈 연산 후 누적합  →(각 곡셈을 결과를 더해나가라)
+		//곱셈 연산 후 누적합  →(각 곱셈을 결과를 더해나가라)
 		//---------	    ======
 		//				0으로 초기화
-		int tot = 0;			//누적합 =0인지 누적곱= 1인지 확인 
+		int tot = 0;			//누적합 = 0인지 누적곱 = 1인지 확인 
 
 		System.out.print("주민번호입력(XXXXXX-XXXXXXX) : ");
 		//Intbr.readLine()
@@ -114,7 +114,7 @@ public class Test1060
 			//str.substring(0 1)  추출하면 결과는 문자열이된다.	"9"
 			if (i==6)
 			{
-				continue;			//뒷부분 무시하고 계속해라~!! -는 int못 바꿈
+				continue;			//뒷부분 무시하고 계속해라~!! -는 int로 못 바꿈
 			}
 			tot += chk[i] * Integer.parseInt(str.substring(i, (i+1))); //뒷부분
 			//				str.substring(i, (i+1)) == -

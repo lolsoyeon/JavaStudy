@@ -7,6 +7,8 @@ public class Clothes implements Items
     long date;
 	
 
+
+	
 	public Clothes(int itemId, String name, int price, int[] size)
 	{
         this.itemId = itemId;
@@ -22,24 +24,41 @@ public class Clothes implements Items
 	public int getAmount(){							//Amount를 리턴 하는 함수
 		int sum = this.size[0]+this.size[1]+this.size[2];						
 		return  sum;
-	};												
+	};
+	public void setAmount(){};											
 	public int getId(){return this.itemId;};
 	public int getSize(int s){return this.size[s];};
-	public void setSize(String s){
-		if (s=="S"||s=="s")
+	public void setSize(String s)
+	{
+		if (s.equals("S") ||s.equals("s"))
 		{
+			if (this.size[0]==0)
+			{
+				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}
+			else
 			this.size[0] = this.getSize(0)-1;
+			
 		}
-		else if (s=="M"||s=="m")
+		else if (s.equals("M")||s.equals("m"))
 		{
+			if (this.size[1]==0)
+			{
+				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}
+			else
 			this.size[1] = this.getSize(1)-1;
 		}
-		else if (s=="L"||s=="l")
+		else if (s.equals("L")||s.equals("l"))
 		{
+			if (this.size[2]==0)
+			{
+				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}
+			else
 			this.size[2] = this.getSize(2)-1;
 		}
 		//System.out.println(this.size[0]+ " " +this.size[1] + " " +this.size[2]);
-		System.out.printf("%s 사이즈 %s 확인해주세요! ",this.size[1] ,price);
-	}
+	};
 
 }

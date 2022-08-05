@@ -5,12 +5,12 @@ public class ThirdTeam
 	{
 		AdminMode am = new AdminMode();
 		do
-		{
+		{	
 			am.display();
 			am.select();
 		}
 		while (true);
 
 	}
-
 }
+

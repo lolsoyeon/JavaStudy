@@ -25,6 +25,18 @@ public class Accessories implements Items
 	public int getId(){return this.itemId;};
 
 	public int getSize(int n){return 0;};
+	public void setSize(String s){}; 
 
-	public void setSize(String s){};
+
+
+	public void setAmount(){
+		
+			if (this.amount==0)
+			{
+				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}
+			else
+			this.amount = this.amount-1;
+	
+	}
 }

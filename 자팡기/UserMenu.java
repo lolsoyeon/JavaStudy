@@ -104,5 +104,22 @@ public void doProcess()
 	}
 }//UserMenu implements Menu
 
+/*
+
+	MyParent p = new MyParent();
+	System.out.println(p.prv);
+
+	class Mychild extends MyParent
+	{
+		System.out.println(p.prv);
+		System.out.println(p.de);
+
+	}
+	public void setHour(int hour)
+	{
+		
+	}
 
 
+
+*/

@@ -84,7 +84,6 @@ public class Test065
 			System.out.printf(">> 1 ~ %d 까지의 합 : %d\n", n, s);
 			
 
-
 			System.out.print("계속하시겠습니까(Y/N)? : ");    //Y,y만 유의미 
 			ch = (char)System.in.read();
 

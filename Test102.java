@@ -81,9 +81,9 @@ class RpsGame
 		return result;
 	}
 
-	public void print(String str)
+	public void print(String result)
 	{
-		System.out.printf("%n>>승부 최종결과 :  %s%n", str);
+		System.out.printf("%n>>승부 최종결과 :  %s%n", result);
 		
 	}
 }

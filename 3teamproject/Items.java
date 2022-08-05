@@ -7,6 +7,8 @@ public interface Items					//Stock이라는 걸로 Item을 두개로 나눠서 관리할 것임 (
 	public abstract int getId();		//(판매모드에서 1,2,3,4,5번에 해당하는) Id를 리턴 하는 함수
 	public abstract int getSize(int n);		
 	public abstract void setSize(String s); 
+	public abstract void setAmount();
+	
 
 }
 

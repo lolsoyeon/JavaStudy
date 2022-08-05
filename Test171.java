@@ -14,8 +14,8 @@
 */
 
 /*
-HashMap<K, V>클래스
- - Hashtable 클래스와 마찬가지로 Map인터페이스에서 상속받은
+ HashMap<K, V>클래스
+ - Hashtable 클래스와 마찬가지로 Map 인터페이스에서 상속받은
  HashMap클래스의 기능은 Hashtable과 동일하지만
  Sychronization 이 없기때문에 동시성 문제가 없다면
  (즉, 멀티 스레드 프로그램이 아닌경우 라면)
