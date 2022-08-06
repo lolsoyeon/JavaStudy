@@ -181,7 +181,7 @@ class Menus		//완성
 	public static final int E_DISP = 2;		//요소 출력
 	public static final int E_FIND = 3;		//요소 검색
 	public static final int E_DEL = 4;		//요소 삭제
-	public static final int E_DHA = 5;		//요소 변경
+	public static final int E_CHA = 5;		//요소 변경
 	public static final int E_EXIT = 6;		//종료
 }
 
@@ -224,7 +224,6 @@ public class Test16300
 		System.out.println("\t5. 요소 변경");
 		System.out.println("\t6. 종료");
 		System.out.println("\t========================");
-	
 		System.out.println();
 
 		
@@ -267,6 +266,7 @@ public class Test16300
 		case 4: delElement();break;
 		case 5: chaElement();break;
 		case 6: exit();break;
+
 
 		}
 
@@ -319,7 +319,7 @@ public class Test16300
 		{	
 			System.out.println("항목이 존재하지 않습니다.");
 		}else 
-			System.out.println("항목이 존재합니다.");
+			System.out.printf("%s 항목이 존재합니다.", x);
 	}
 
 	//자료구조 내 요소 삭제 메소드
@@ -374,7 +374,7 @@ public class Test16300
 		}
 		else
 			System.out.println("항목이 존재하지 않아 삭제할 수 없습니다.");
-		System.out.println();
+			System.out.println();
 	}
 
 

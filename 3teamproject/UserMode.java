@@ -1,5 +1,5 @@
 import java.io.IOException;
-import java.util.List;
+import java.util.Vector;
 import java.util.Scanner;
 
 public class UserMode implements Mode
@@ -7,7 +7,7 @@ public class UserMode implements Mode
 	Scanner sc = new Scanner(System.in);
 
 	private VendingMachine machine;
-	List<Items> items;
+	Vector<Items> items;
 
 	public UserMode(VendingMachine vendingmachine)
 	{
@@ -26,7 +26,7 @@ public class UserMode implements Mode
 			/*System.out.println((i+1)+"."+items.get(i).getName()+"      "+"("+items.get(i).getPrice()+")"+"  - "
 			+"(S:"+items.get(i).getSize(0)+" M:"+items.get(i).getSize(1)+" L:"+items.get(i).getSize(2)+")");*/
 
-			System.out.printf("%2d. %s(%d) - (S:%d M:%d L:%d)", (i+1),  items.get(i).getName(), items.get(i).getPrice(), items.get(i).getSize(0), items.get(i).getSize(1), items.get(i).getSize(2));
+			System.out.printf("%2d. %s(%d) - (S:%2d M:%2d L:%2d)", (i+1),  items.get(i).getName(), items.get(i).getPrice(), items.get(i).getSize(0), items.get(i).getSize(1), items.get(i).getSize(2));
 			if (i==2)
 			{
 				System.out.println(); continue;
@@ -46,7 +46,7 @@ public class UserMode implements Mode
 		{
 
 
-			System.out.printf("%2d. %s(%d) - (S:%d M:%d L:%d)", (i+1),  items.get(i).getName(), items.get(i).getPrice(), items.get(i).getSize(0), items.get(i).getSize(1), items.get(i).getSize(2));
+			System.out.printf("%2d. %s(%d) - (S:%2d M:%2d L:%2d)", (i+1),  items.get(i).getName(), items.get(i).getPrice(), items.get(i).getSize(0), items.get(i).getSize(1), items.get(i).getSize(2));
 			if (i==7)
 			{
 				System.out.println(); continue;
@@ -98,7 +98,7 @@ public class UserMode implements Mode
 	public boolean selecting() throws IOException		//입력을 받고 입력에 따른 내부적으로 기능 호출
 	{	
 		boolean flag =true;
-		System.out.print("무엇을 구매하시겠습니까?");
+		System.out.print("무엇을 구매하시겠습니까? ");
 		String size = null;
 
 		int itemId = sc.nextInt();
@@ -129,6 +129,6 @@ public class UserMode implements Mode
 		
 		return true;
 		}
-	};												
+	}											
 	
 

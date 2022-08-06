@@ -2,33 +2,33 @@
 import java.util.Scanner;
 import java.util.Random;
 
-class RpsGame 
+public class RpsGame 
 {
 	private int user;
 	private int admin = 0;
-	private int price = 50000;
-	//profit += price;
+	private int price = 0;
 	
 	// 5만원 이상일때 게임 실행하기
-	public void gameStart()
+	public void gameStart(int total)
 	{
+		price = total;
 		while (true)
 		{
-			if (price >= 50000)
+			if (total >= 50000)
 			{
 
 			System.out.println("■■■ 50,000원 이상 구매시 참여 가능한 이벤트~!! ■■■");
 			System.out.println();
 			break;
 			}
-			else if (price < 50000)
+			else if (total < 50000)
 			{
-			System.out.printf("최종 결제 금액은 : %d\n", price);
+			System.out.printf("최종 결제 금액은 : %d\n", total);
 			//결제창 호출();
 			
 			System.exit(-1);
 			}
-			
+
 		}
 	}
 
@@ -57,7 +57,7 @@ class RpsGame
 	}
 
 	// 중간 결과 출력
-	public  void middleCalc()
+	public void middleCalc()
 	{
 		String[] str = {"가위","바위","보"};
 
@@ -140,8 +140,8 @@ class RpsGame
 			{
 				System.out.println("다시 열어주세요 (1~3)");
 			}
-			return user;
 		}
+		
 		
 		/*
 		String[] discount = {"1000", "3000","5000"};
@@ -154,16 +154,17 @@ class RpsGame
 		System.out.println();
 		*/
 	
+
 		if (admin == 1)
-			  System.out.print("1000원 할인권 당첨 !\n");
+			  System.out.print("1000원 할인권 당첨 !!!\n");
 			//System.out.println();
 		
 		else if (admin == 2)
-			System.out.print("3000원 할인권 당첨 !\n");
+			System.out.print("3000원 할인권 당첨 !!!\n");
 			//System.out.println();
 	
 		else if (admin == 3)
-			System.out.print("5000원 할인권 당첨 !\n");		
+			System.out.print("5000원 할인권 당첨 !!!\n");		
 		else
 			System.out.print("다시 입력해주세요.\n");
 			 System.out.println();
@@ -175,6 +176,7 @@ class RpsGame
 
 }
 
+/*
 public class EventGame
 {
 	public static void main(String[] args)
@@ -189,10 +191,6 @@ public class EventGame
 
 		}
 	}
-
-/*
-/게임 연산 후 누적합  →(각 금액의 결과를 더해나가라)
-//		0으로 초기화
-public static int profit = 0;		//누적합
 */
+
 

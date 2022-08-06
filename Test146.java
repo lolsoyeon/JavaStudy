@@ -62,7 +62,7 @@ class Lotto
 
 		while (cnt<6)		// 0 1 2 3 4 5 
 		{
-			n = rd.nextInt(45) + 1;			//0 ~ 44 →사이의 『+1』 → 1 ~45
+			n = rd.nextInt(45) + 1;		//0 ~ 44 →사이 랜덤 발생 따라서 『+1』 → 1 ~45
 
 			for (int i =0;i<cnt ;i++ )		//cnt →4 / i →0123
 			{
@@ -72,8 +72,9 @@ class Lotto
 				}
 
 				// num[cnt++] = n;		// 위치가 잘못된 상황
-			}
+			}  
 			num[cnt++] = n;				// 위치 변경~!!!  check~!!!
+			//후위형 값이 참조된후에 증가시킨다.
 		}
 		//정렬 메소드 호출
 		sorting();

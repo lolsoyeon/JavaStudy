@@ -22,17 +22,16 @@
  {
 	 System.out.println(e.nextElement());
  }
-
-
  - java.util.Iterator<E> 인터페이스
- : Enumeration 과의 차이점은 단지 remove()메소드가 추가된 것뿐이다.
+
+ : Enumeration 과 Iterator 의 차이점은 단지 remove()메소드가 추가된 것 뿐이다.
   Iterator 가 가지고있는 『hasNext()』와 『next()』메소드는
-  이름만 약간 다를뿐 인터페이스가 가지고있는
-  hasMoreElements()와 그리고 『nextElement()』와
-  정확히 일치하는 기능을 수행한다
+  이름만 약간 다를뿐 인터페이스가 가지고 있는
+  『hasMoreElements()』와 그리고 『nextElement()』와
+  정확히 일치하는 기능을 수행한다.
   Enumeration 대신 Iterator를 JDK1.2부터 추가하여 사용하게 된 이유는
-  Enumeration 인터페이스는 집합 내에서 요소를 제거할 방법이 없기 때문에
- 이를 보완하기 위해 나온것이 Iterator 인터페이스다.
+  Enumeration 인터페이스는 집합 내에서 요소를 제거 할 방법이 없기 때문에
+  이를 보완하기 위해 나온것이 Iterator 인터페이스다.
  */
 
  import java.util.Vector;

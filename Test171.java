@@ -21,7 +21,7 @@
  (즉, 멀티 스레드 프로그램이 아닌경우 라면)
  HashMap을 사용하는 것이 성능을 향상시킬수 있다.
 
- - 또한, HashMap은 Hashtable 클래스와 달리 null ★ 을 혀용한다.
+ - 또한, HashMap은 Hashtable 클래스와 달리 null ★ 을 허용한다.
 
 */
 import java.util.HashMap;
