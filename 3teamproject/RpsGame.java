@@ -3,33 +3,42 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class RpsGame 
-{
+{	
+	private Sales sales;
 	private int user;
 	private int admin = 0;
 	private int price = 0;
-	
-	// 5만원 이상일때 게임 실행하기
-	public void gameStart(int total)
+	//int i = 0;
+	public RpsGame(Sales sales)
 	{
-		price = total;
-		while (true)
-		{
-			if (total >= 50000)
-			{
+		this.sales = sales;
+	}
 
-			System.out.println("■■■ 50,000원 이상 구매시 참여 가능한 이벤트~!! ■■■");
+	// 7만원 이상 구매 할 때 마다 게임 실행하기
+	public boolean gameStart(int price)
+	{
+		int total = price + sales.getsumAll(); //+ 현재 매출 sales.getsumAll()
+		//while (true)
+		//{
+			if (price >= 70000)	
+			//
+			{
+				
+			System.out.println("■■■ 7만원 이상 구매 시 참여 가능한 이벤트~!! ■■■");
 			System.out.println();
-			break;
+			//i++;
+			return true;
+			//break;
 			}
-			else if (total < 50000)
-			{
-			System.out.printf("최종 결제 금액은 : %d\n", total);
-			// 결제창 호출();
+			//else 
+				//System.out.printf("최종 결제 금액은 : %d\n", price);
+			//결제창 호출();
 			
-			System.exit(-1);
-			}
-
-		}
+			//System.exit(-1);
+			//}
+			
+		//}
+		return false;
 	}
 
 	// 컴퓨터의 가위바위보
@@ -68,7 +77,7 @@ public class RpsGame
 	}
 
 	// 승부에 대한 최종 결과 연산
-	public void resultCalc()
+	public int resultCalc()
 	{
 		//int local_admin;
 		// (유저=="가위"&& 컴퓨터=="가위")||(유저=="바위"&& 컴퓨터=="바위")||(유저=="보"&& 컴퓨터=="보")
@@ -76,26 +85,25 @@ public class RpsGame
 		if ((user==1&& admin==3)||(user==2&& admin==1)||(user==3&& admin==2))
 		{
 		   System.out.println("승부 결과 : 당신이 승리했습니다~!!\n");
-		   RandomBox();
+		   int result = RandomBox();
 
-		   if (admin == 1)
+		   if (result == 1)
 		   {
-			   System.out.printf("최종 결제 금액은 : %d\n", price - 1000);
+			   System.out.println("할인 금액은 : 1000원 입니다");
+			   return 1000;
 			  
 		   }
-		   else if (admin == 2)
+		   else if (result == 2)
 		   {
-			   System.out.printf("최종 결제 금액은 : %d\n", price - 3000);
-			  
+			   System.out.println("할인 금액은 : 3000원 입니다");
+				return 3000;
 		   }
-		   else if (admin == 3)
+		   else if (result == 3)
 		   {
-			   System.out.printf("최종 결제 금액은 : %d\n", price - 5000);
-			 
+			   System.out.println("할인 금액은 : 5000원 입니다");
+				return 5000;
 		   }
-		   else
-			   System.out.println("오류입니다. 관리자에게 문의하세요.");
-		   
+	 
 		   /*
 		   local_admin = RandomBox();
 		   System.out.printf(">> 결과값 : %d",local_admin);
@@ -105,17 +113,16 @@ public class RpsGame
 		else if ((user==1&& admin==2)||(user==2&& admin==3)||(user==3&& admin==1))
 		{
 			System.out.println("승부 결과 : 당신이 졌습니다. 아쉽지만 다음기회에~!!\n");
-			System.out.printf("최종 결제 금액은 : %d", price);
 			System.out.println();
 		}
 		
 		else if (user==admin)
 		{
 			System.out.println("승부 결과 : 무승부입니다. 아쉽지만 다음기회에~!!\n");
-			System.out.printf("최종 결제 금액은 : %d", price);
 			System.out.println();
 
 		}
+		return 0;
 	}
 
 	// 이겼을 때 랜덤박스 생성 메소드

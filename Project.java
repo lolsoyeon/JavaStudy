@@ -128,7 +128,7 @@ public class Project
 	}//end admin
 
 		//유저 인터페이스를 담당하는 메소드
-		public static void user()
+		public static void user() 
 		{
 			Boolean first = true;
 			int money = 0;

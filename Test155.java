@@ -5,18 +5,18 @@
 import java.util.Stack;
 //import java.util.StringTokenizer;
 
-public	class Test155
+public class Test155
 {
-	//정적 문자열 배열 선언 및 초기화
+	// 정적 문자열 배열 선언 및 초기화
 	private static final String[] colors = {"검정","노랑","초록","파랑","빨강","연두"};
 
 
-	//생성자
+	// 생성자
 	public Test155()
 	{
 
-		//st 라는 Stack자료구조 생성
-		//제네릭을 활용하여 자료구조에 담기는 데이터 표현 → 『<String>』
+		// st 라는 Stack자료구조 생성
+		// 제네릭을 활용하여 자료구조에 담기는 데이터 표현 → 『<String>』
 		Stack<String> st = new Stack<String>();
 
 		//st라는 Stack 자료구조에 데이터 (colors) 담기
@@ -58,7 +58,7 @@ public	class Test155
 
 
 	}
-	//출력 메소드
+	// 출력 메소드
 	private void popStack(Stack<String>st)			//??매개변수타입
 	{
 			System.out.print("pop : ");
@@ -66,7 +66,7 @@ public	class Test155
 			while (!st.empty())		//isEmpty()
 			{
 
-				System.out.print(st.pop() + " ");
+				System.out.print(st.56() + " ");
 			}
 			System.out.println();
 	}

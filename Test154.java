@@ -70,7 +70,7 @@
 	- E Object peek()
 	스택의 맨 위 객체를 스택에서 제거하지 않고 반환한다.
 	- E Object pop()
-	스택의 맨 위 의 객체를 반환하고 스택에서 제거한다.
+	스택의 맨 위 객체를 반환하고 스택에서 제거한다.
 	- E Object push(E item)
 	 객체를 스택 자료 구조에 저장한다.
     - int search(Object o)
@@ -79,7 +79,7 @@
 */
 
 
-//제네릭, 제네릭 표현식(tag , linked)
+// 제네릭, 제네릭 표현식(tag , linked)
 
 import java.util.Stack;
 
@@ -87,7 +87,7 @@ public class Test154
 {
 	public static void main(String[] args)
 	{
-		//Stack 자료구조 생성
+		// Stack 자료구조 생성
 		Stack<Object> myStack = new Stack<Object>();
 
 
@@ -96,17 +96,17 @@ public class Test154
 		String str3 = "정미경";
  		String str4 = "조현하";
 
-		//myStack 이라는 Stack 자료구조안에 str1 ~ str4 까지 담아내기
-		//add(), push() ==>>적재시 사용
+		// myStack 이라는 Stack 자료구조안에 str1 ~ str4 까지 담아내기
+		// add(), push() ==>>적재시 사용
 		myStack.add(str1);
 		myStack.add(str2);
 		myStack.push(str3);
 		myStack.push(str4);
 
 
-		//제네릭이 <String>일 경우 String val1 = myStack.peek();
+		// 제네릭이 <String>일 경우 String val1 = myStack.peek();
 
-		//peek() : 스택 맨위의 객체 반환, ★ 제거하지 않는다.
+		// peek() : 스택 맨위의 객체 반환, ★ 제거하지 않는다.
 		String val1 = (String)myStack.peek();
 		System.out.println("val1 : " + val1);
 		//==-->>val1 : 조현하
@@ -121,9 +121,9 @@ public class Test154
 
 		String value = "";
 		
-		//myStack 이라는 이름을 가진 Stack 자료구조에
-		//데이터가 비어있는 상태가 아니라면...(즉, 채워져있는 상태라면....)
-		//isEmpty()
+		// myStack 이라는 이름을 가진 Stack 자료구조에
+		// 데이터가 비어있는 상태가 아니라면...(즉, 채워져있는 상태라면....)
+		// isEmpty()
 									
 		while(!myStack.isEmpty())   
 		{
@@ -132,8 +132,8 @@ public class Test154
 			System.out.println("value : " + value);
 			
 		}
-//현하 미경 현성 시연/ 미경 현성 시연  / 현성 시연		/ 시연			/비어있음
-//!fulse → true     /!false→ true	   / !false→ true / !false→ true /!true→ false
+// 현하 미경 현성 시연/ 미경 현성 시연     / 현성 시연	   / 시연		   /비어있음
+// !fulse → true     /!false→ true	   / !false→ true / !false→ true /!true→ false
 
 
 /*

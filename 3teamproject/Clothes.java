@@ -1,149 +1,108 @@
-public class Clothes implements Items //상/하의  
+import java.util.Scanner;
+
+public class Clothes implements Items //상/하의
 {	
 	int itemId;
 	String name;
 	int[] size;
-    int price;
-    long date;
+	int price;
+	long date;
+	Scanner sc = new Scanner(System.in);
 
-
-	private VendingMachine machine;
-	private HashMap<String,Integer> map;
-	
-	
-	public Clothes(int itemId, String name, int price, int[] size)
-	{
+	public Clothes(int itemId, String name, int price, int[] size) {
         this.itemId = itemId;
 		this.name = name;
         this.price = price;
 		this.size = size;
         this.date = System.currentTimeMillis();
+	} //생성자
+	//public void Test(){};
+	//굳이 인터페이스에서 필요없는 제약을 왜 거냐는 뜻임
+	//인터페이스에 Test라는 메소드가 없어도 쓸 수 있다
+	// = 인터페이스에서 빼주면 된다.
 
-	}
-	
-	public void getMap(VendingMachine vendingmachine)
-	{
-		this.machine = vendingmachine;
-		map = this.machine.getMap();
-	};
 
-	public void add(){};							//부족한 재고를 파악해서 Maximum(10)까지 한번에 채워주는 기능을 담당하는 메소드
 	public String getName(){return this.name;};		//Name을 리턴 하는 함수
 	public int getPrice(){return this.price;};		//Price를 리턴 하는 함수
 	public int getAmount(){							//Amount를 리턴 하는 함수
-		int sum = this.size[0]+this.size[1]+this.size[2];						
-		return  sum;
-	};
-	public void setAmount(){};											
-	public int getId(){return this.itemId;};
-	public int getSize(int s){return this.size[s];};
-	public void setAmountstock(){};
-	public void setSize(String s)
-	{
+
+		System.out.print("사이즈를 입력해주세요(S/M/L) : ");
+		String s = sc.next();
+		if (s.equalsIgnoreCase("s")))
+		{
+			return this.size[0];
+		}
+		else if (s.equalsIgnoreCase("m"))
+		{
+			return this.size[1];
+		}
+		else if (s.equals("L")||s.equals("l"))
+		{
+			return this.size[2];
+		}
+		else{
+			System.out.print("잘 못 입력하셨습니다. ");
+			return 0 ; // 재입력 받게 끔
+		}
+	} //Amount를 리턴 하는 함수
+	public void setAmount(){
+
+		System.out.print("사이즈를 입력해주세요(S/M/L) : ");
+		String s = sc.next();
 		if (s.equals("S") ||s.equals("s"))
 		{
 			if (this.size[0]==0)
 			{
 				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}else{
+				this.size[0] -= 1 ;
 			}
-			else
-			this.size[0] = this.getSize(0)-1;
-			
 		}
 		else if (s.equals("M")||s.equals("m"))
 		{
 			if (this.size[1]==0)
 			{
 				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}else{
+				this.size[1] -= 1 ;
 			}
-			else
-			this.size[1] = this.getSize(1)-1;
-
 		}
 		else if (s.equals("L")||s.equals("l"))
 		{
 			if (this.size[2]==0)
 			{
 				System.out.println("<<품절>> 구매 불가능 합니다.");
+			}else{
+				this.size[2] -= 1 ;
 			}
-			else
-			this.size[2] = this.getSize(2)-1;
-
 		}
-		// 수량이 주는것인지 확인 하기 위한 테스트
-		// System.out.println(this.size[0]+ " " +this.size[1] + " " +this.size[2]);
-	};
+		else{
+			System.out.print("잘못 입력하셨습니다. ");
+		}
+	} //Amount를 설정 하는 함수(-1 해줌)
+	public void fill(){
+		System.out.print("사이즈를 입력해주세요(S/M/L) : ");
+		String s = sc.next();
 
-	public void setSizestock(String s)
-	{
 		if (s.equals("S") ||s.equals("s"))
 		{
-		
-			this.size[0] = this.getSize(0)+5;
-			
+
+			this.size[0] += 5;
+
 		}
 		else if (s.equals("M")||s.equals("m"))
 		{
-			
-			this.size[1] = this.getSize(1)+5;
+
+			this.size[1] += 5;
 		}
 		else if (s.equals("L")||s.equals("l"))
 		{
-			
-			this.size[2] = this.getSize(2)+5;
+
+			this.size[2] += 5;
 		}
-		// 수량이 주는것인지 확인 하기 위한 테스트
-		// System.out.println(this.size[0]+ " " +this.size[1] + " " +this.size[2]);
-	};
-
-	public void saveSales(String name, String size)
-	{
-		
-		String product = name + "_" + size;
-		Boolean bIsKey;
-		Integer stock;
-
-		bIsKey = map.containsKey(product);
-
-		if (bIsKey)
-		{
-			// 수량 ++
-			stock = map.get(product) + 1;
-			map.put(product, stock);
-		}
-		else
-		{
-			// 키 선언, 값 stock
-
-			map.put(product, 1);
-		}
-		
-
-	};
-	
-	public void saveSales(String name)
-	{
-		
-		String product = name;
-		Boolean bIsKey;
-		Integer stock;
-
-		bIsKey = map.containsKey(product);
-
-		if (bIsKey)
-		{
-			// 수량 ++
-			stock = map.get(product) + 1;
-			map.put(product, stock);
-		}
-		else
-		{
-			// 키 선언, 값 stock
-
-			map.put(product, 1);
-		}
-		
-
-	};
-
+		//System.out.println(this.size[0]+ " " +this.size[1] + " " +this.size[2]);
+	} // 5개씩 추가
+	public int getSize(int num){
+		return this.size[num] ;
+	}
 }
