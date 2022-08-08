@@ -12,6 +12,7 @@ public class ThirdTeam
 			flag = am.select();
 		}
 		while (flag);
-
 	}
 }
+
+ 

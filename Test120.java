@@ -54,14 +54,14 @@ public static final 의 변경자로 설정된다.
  인터페이스에서의 변수는 상수처럼 값이 바뀔 수 없기 때문에
  선언 시 미리 값을 할당해 놓야한다.
 
- ※인터페이스의 구현
+ ※ 인터페이스의 구현
 
  인터페이스는 클래스를 위한 템플릿이기 때문에 
  사용가능한 인터페이스가 되기 위해서는
  자바 프로그램에서 인터페이스를 구현해 주여야한는데
  이러한 기능을 수행하는것이 implements 예약어 이다.
 
- ※클래스는 동시에 두 개 이상의 인터페이스를 implements 할 수있다~!~!
+ ※ 클래스는 동시에 두 개 이상의 인터페이스를 implements 할 수있다~!~!
 
 
 
@@ -73,13 +73,13 @@ interface ADemo
 	public  void write();
 }
 
-//인터페이스
+// 인터페이스
 interface BDemo
 {
 	public void print();
 }
 
-//두 인터페이스(ADemo, BDemo) 를 상속받는 인터페이스
+// 두 인터페이스(ADemo, BDemo) 를 상속받는 인터페이스
 interface CDemo extends ADemo, BDemo
 {
 
@@ -89,7 +89,7 @@ interface CDemo extends ADemo, BDemo
 	public void test();
 }
 
-//클래스
+// 클래스
 //class DemoImpl
 //    ↓
 //추상 클래스

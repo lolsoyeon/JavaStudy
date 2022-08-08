@@ -5,11 +5,11 @@
     프로그램에서 발생하는 오류(Error)는
 
 	① 잘못된 문법을 사용하거나 변수등을 정의하지 않은 상태에서
-	사용 함으로써 컴파일 단계에서 발생하는 문법적인 오류 와
+	사용 함으로써 컴파일 단계에서 발생하는 문법적인 오류와
 
 	② 프로그램을 실행하는 과정에서 발생되는 런타임 오류(Error)로 나눌 수 있다.
 
-  -개발자가 문제 분석을 잘못하거나 실수에 의해
+  - 개발자가 문제 분석을 잘못하거나 실수에 의해
 	엉뚱한 결과를 가져오게 되는 논리적인 오류(Error)와
 
  - 시스템 이상에서 발생되는 시스템 오류(Error), 그리고
@@ -18,7 +18,7 @@
    예외사항(Exception)이 있다.
 
   예를 들어,
-  어떤 수를 0으로 나누나
+  어떤 수를 0으로 나누거나
   배열을 제어하는 과정에서 첨자를 벗어나는 상황이 발생하거나...
   존재하지 않는 파일을 오픈하여 읽어들인다거나...
 
@@ -56,7 +56,6 @@
    ※ 예외의 종류
 
    - checked exception
-
    메소드 내에서 예외가 발생한 경우
    메소드를 정의할 때 『throws』 문에 메소드 내에서 발생할 수 있는
    예외들을 명시해 주거나 또는 그 예외를 『try ~ catch』해서
@@ -67,7 +66,6 @@
    컴파일 자체가 불가능하다.
 
    - unchecked exception		 ArryIndex 어쩌고.....
-
    사전에 처리하지 않아도 컴파일러가 체크하지 않는
    런타임시에 발생할 수 있는 예외이다.
 
@@ -81,7 +79,6 @@
   - void printStackTrace(PrintStream s)
   - void printStackTrace(PrintStream w)
 	: 표준 출력 스트림에 스택 호출 목록을 마지막 메소드로 부터 출력한다.
-
 
   주요 런타인 예외 클래스
    - ArihmeticException
@@ -113,14 +110,14 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class Test147
-{											//①
+{											//방법①
 	public static void main(String[] args) //throws IOException
 	{
 
-		//BufferedReader 클래스 인스턴스 생성
+		// BufferedReader 클래스 인스턴스 생성
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		//주요 변수 선언
+		// 주요 변수 선언
 		int a, b, c;
 /*
 		// ② 
@@ -138,12 +135,12 @@ public class Test147
 		}
 		catch (IOException e)
 		{
-			//발생한  IOException을 ......어찌해라
-			//e를 어찌해라 라는 내용
+			// 발생한  IOException을 ......어찌해라
+			// e를 어찌해라 라는 내용이 들어갈 자리
 
-			//IOException checked execption
-			//메소드를 정의 하는 과정에서 throws 한 예외
-			//잡아내거나 던지지 않을 경우
+			// IOException checked execption
+			// 메소드를 정의 하는 과정에서 throws 한 예외
+			// 잡아내거나 던지지 않을 경우
 
 			System.out.println(e.toString());
 		}
@@ -208,7 +205,6 @@ public class Test147
 		}
 
 */
-
 		//etc
 		try
 		{

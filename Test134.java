@@ -3,10 +3,8 @@
  - 자바에서 기본적으로 제공하는 주요 클래스들
  - Wrapper 클래스
 ==================================================================*/
-
 public class Test134
 {
-
 	public static void main(String[] args)
 	{
 		byte b = 3;
@@ -19,42 +17,34 @@ public class Test134
 
 		System.out.println(b2);
 		System.out.println(i2);
-		//--==>>3
-		//		256
+		//--==>> 3
+		//--==>> 256
 
 		print(b2);
 		print(i2);
 		print(f2);
+	}
 
-	}
+	// print(Object obj) 말고 b2와 i2를 넘겨 받을 수 있는 방법을 찾아라
+
 	/*
-	static void print(Byte b)
-	{		
-	}
-	static void print(Short s)
-	{
-		
-	}
-	static void(Integer i)
-	{
-		
-	}
+	static void print(Byte b){}
+	static void print(Short s){}
+	static void(Integer i){}
 	*/
 	
-	//print(3);		업캐스팅
-	//static void print(Object obj)				///static 공부하기~!~!
+	// print(3);		업캐스팅
+	// static void print(Object obj)				///static 공부하기~!~!
 		
-	
-	//java.lang.Number (추상)클래스
-	//모든 숫자형 Wrapper 클래스의 부모 클래스
-	//(슈퍼 클래스, 상위클래스)이다.
-	//b2, i2자료형이 Number에 넘어오면서
-	//업 캐스팅 이 일어나게된다.
+	// java.lang.Number : (추상)클래스
+	// 모든 숫자형 Wrapper 클래스의 부모 클래스
+	// (슈퍼 클래스, 상위클래스)이다.
+	// b2, i2 참조자료형이 Number에 넘어오면서
+	// 업 캐스팅이 일어나게된다.
 
 	static void print(Number nb)
 	{
 		System.out.println(nb);
-
 		/*
 		if(n instanceof Integer)
 		{
@@ -62,6 +52,7 @@ public class Test134
 		}
 		else if (n instanceod Double)
 		{
+
 		}
 		*/
 	}

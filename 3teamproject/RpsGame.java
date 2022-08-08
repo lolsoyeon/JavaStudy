@@ -14,7 +14,7 @@ public class RpsGame
 		this.sales = sales;
 	}
 
-	// 7만원 이상 구매 할 때 마다 게임 실행하기
+	// 매출 달성할 때 마다 게임 실행하기
 	public boolean gameStart(int price)
 	{
 		int total = price + sales.getsumAll(); //+ 현재 매출 sales.getsumAll()
@@ -24,7 +24,7 @@ public class RpsGame
 			//
 			{
 				
-			System.out.println("■■■ 7만원 이상 구매 시 참여 가능한 이벤트~!! ■■■");
+			System.out.println("■■■ 일정 매출액 달성 시 참여 가능한 이벤트~!! ■■■");
 			System.out.println();
 			//i++;
 			return true;
@@ -89,18 +89,18 @@ public class RpsGame
 
 		   if (result == 1)
 		   {
-			   System.out.println("할인 금액은 : 1000원 입니다");
+			   System.out.println("할인 금액은 : 1,000원 입니다");
 			   return 1000;
 			  
 		   }
 		   else if (result == 2)
 		   {
-			   System.out.println("할인 금액은 : 3000원 입니다");
+			   System.out.println("할인 금액은 : 3,000원 입니다");
 				return 3000;
 		   }
 		   else if (result == 3)
 		   {
-			   System.out.println("할인 금액은 : 5000원 입니다");
+			   System.out.println("할인 금액은 : 5,000원 입니다");
 				return 5000;
 		   }
 	 
@@ -163,15 +163,15 @@ public class RpsGame
 	
 
 		if (admin == 1)
-			  System.out.print("1000원 할인권 당첨 !!!\n");
+			  System.out.print("1,000원 할인권 당첨 !!!\n");
 			//System.out.println();
 		
 		else if (admin == 2)
-			System.out.print("3000원 할인권 당첨 !!!\n");
+			System.out.print("3,000원 할인권 당첨 !!!\n");
 			//System.out.println();
 	
 		else if (admin == 3)
-			System.out.print("5000원 할인권 당첨 !!!\n");		
+			System.out.print("5,000원 할인권 당첨 !!!\n");		
 		else
 			System.out.print("다시 입력해주세요.\n");
 			 System.out.println();

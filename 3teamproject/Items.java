@@ -1,10 +1,11 @@
-public interface Items					//Itemï¿½ï¿½ ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¼ï¿½ï¿½ï¿½ ï¿½Ì¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ / ï¿½ï¿½È­)
-{										//Item ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-	public abstract String getName();	//Nameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
-	public abstract int getPrice();		//Priceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
-	public abstract int getAmount();	//Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
-	public abstract void setAmount();   //Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½(-1 ï¿½ï¿½ï¿½ï¿½)
-	public abstract void fill();        // 5ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+// ItemÀ» µÎ°³·Î ³ª´²¼­ °ü¸®ÇÒ °ÍÀÓ °øÅëµÈ ¼Ó¼ºÀ» »Ì¾Æ¼­ ÀÎÅÍÆäÀÌ½º·Î ¸¸µå·Á°í Ã³À½¿¡ ¼³°èÇÔ (»óÇÏÀÇ / ÀâÈ­)
+public interface Items					
+{										// Item ´ë½Å »ó,ÇÏÀÇ¿Í ÀâÈ­¸¦ ¾µ °ÍÀÓ
+	public abstract String getName();	// NameÀ» ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
+	public abstract int getPrice();		// Price¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
+	public abstract int getAmount();	// Amount¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
+	public abstract void setAmount();   // Amount¸¦ ¼³Á¤ ÇÏ´Â ÇÔ¼ö(-1 ÇØÁÜ)
+	public abstract void fill();        // 5°³¾¿ Ãß°¡
 
 }
 

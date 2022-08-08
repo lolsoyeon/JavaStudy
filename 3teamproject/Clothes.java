@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Clothes implements Items //ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
+public class Clothes implements Items //»ó/ÇÏÀÇ
 {	
 	int itemId;
 	String name;
@@ -15,24 +15,18 @@ public class Clothes implements Items //ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
         this.price = price;
 		this.size = size;
         this.date = System.currentTimeMillis();
-	} //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	//public void Test(){};
-	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å³Ä´ï¿½ ï¿½ï¿½ï¿½ï¿½
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ Testï¿½ï¿½ï¿½ ï¿½Þ¼Òµå°¡ ï¿½ï¿½ï¿½îµµ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½
-	// = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¸ï¿½ ï¿½È´ï¿½.
+	} //»ý¼ºÀÚ
+	public String getName(){return this.name;};		//NameÀ» ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
+	public int getPrice(){return this.price;};		//Price¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
+	public int getAmount(){							//Amount¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
 
-
-	public String getName(){return this.name;};		//Nameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
-	public int getPrice(){return this.price;};		//Priceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
-	public int getAmount(){							//Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
-
-		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½î¸¦ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½(S/M/L) : ");
+		System.out.print("»çÀÌÁî¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(S/M/L) : ");
 		String s = sc.next();
-		if (s.equalsIgnoreCase("s")))
+		if (s.equals("S") ||s.equals("s"))
 		{
 			return this.size[0];
 		}
-		else if (s.equalsIgnoreCase("m"))
+		else if (s.equals("M")||s.equals("m"))
 		{
 			return this.size[1];
 		}
@@ -41,19 +35,19 @@ public class Clothes implements Items //ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 			return this.size[2];
 		}
 		else{
-			System.out.print("ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½. ");
-			return 0 ; // ï¿½ï¿½ï¿½Ô·ï¿½ ï¿½Þ°ï¿½ ï¿½ï¿½
+			System.out.print("Àß ¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ");
+			return 0 ; // ÀçÀÔ·Â ¹Þ°Ô ²û
 		}
-	} //Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+	} //Amount¸¦ ¸®ÅÏ ÇÏ´Â ÇÔ¼ö
 	public void setAmount(){
 
-		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½î¸¦ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½(S/M/L) : ");
+		System.out.print("»çÀÌÁî¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(S/M/L) : ");
 		String s = sc.next();
 		if (s.equals("S") ||s.equals("s"))
 		{
 			if (this.size[0]==0)
 			{
-				System.out.println("<<Ç°ï¿½ï¿½>> ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.");
+				System.out.println("<<Ç°Àý>> ±¸¸Å ºÒ°¡´É ÇÕ´Ï´Ù.");
 			}else{
 				this.size[0] -= 1 ;
 			}
@@ -62,7 +56,7 @@ public class Clothes implements Items //ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 		{
 			if (this.size[1]==0)
 			{
-				System.out.println("<<Ç°ï¿½ï¿½>> ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.");
+				System.out.println("<<Ç°Àý>> ±¸¸Å ºÒ°¡´É ÇÕ´Ï´Ù.");
 			}else{
 				this.size[1] -= 1 ;
 			}
@@ -71,17 +65,17 @@ public class Clothes implements Items //ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 		{
 			if (this.size[2]==0)
 			{
-				System.out.println("<<Ç°ï¿½ï¿½>> ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.");
+				System.out.println("<<Ç°Àý>> ±¸¸Å ºÒ°¡´É ÇÕ´Ï´Ù.");
 			}else{
 				this.size[2] -= 1 ;
 			}
 		}
 		else{
-			System.out.print("ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½. ");
+			System.out.print("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ");
 		}
-	} //Amountï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½(-1 ï¿½ï¿½ï¿½ï¿½)
+	} //Amount¸¦ ¼³Á¤ ÇÏ´Â ÇÔ¼ö(-1 ÇØÁÜ)
 	public void fill(){
-		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½î¸¦ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½(S/M/L) : ");
+		System.out.print("»çÀÌÁî¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(S/M/L) : ");
 		String s = sc.next();
 
 		if (s.equals("S") ||s.equals("s"))
@@ -101,7 +95,7 @@ public class Clothes implements Items //ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 			this.size[2] += 5;
 		}
 		//System.out.println(this.size[0]+ " " +this.size[1] + " " +this.size[2]);
-	} // 5ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+	} // 5°³¾¿ Ãß°¡
 	public int getSize(int num){
 		return this.size[num] ;
 	}

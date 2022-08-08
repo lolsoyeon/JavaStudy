@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.regex.Pattern;
-
-
+//import java.io.IOException;
 public class MoneyInsert {
 	// 우선 변수명을 맘대로 설정했음
 	int coin;
 	int sum_coin = 0;
 	private ArrayList<Money> money_list;
+
 
 	public MoneyInsert() {
 		money_list = new ArrayList<>();
@@ -18,48 +17,41 @@ public class MoneyInsert {
 		money_list.add(new Money(5, 500, 20));
 		money_list.add(new Money(6, 100, 20));
 	}
-
-
 	// 현금 투입 메소드
-	public int insert_coin() {
+	int insert_coin() {
 		Scanner sc = new Scanner(System.in);
-		String firstInput;
+
 		boolean flag = true;
 
 		while (flag) {
-			System.out.println("현금을 투입하세요. : ");
-			System.out.println("①:50000원 ②:10000원 ③:5000원 ④:1000원 ⑤:500원 ⑥:100원 ");
-			
-			firstInput = sc.nextLine();
-			
-			//1. 정규 표현식을 사용하여 입력한 값이 숫자가 맞는지를 확인한다.
-			//	1.1. 참일 시 = 계속 진행
-			//	1.2. 거짓일 시 = 입력한 값을 보여주고 숫자 값을 입력하라는 메세지 리턴.
-
-
-			if(Pattern.matches("^[0-9]*", firstInput)) {
-				
-				
-			} else {
-				System.out.println("입력한 값 : " + firstInput);
-				System.out.println("유효하지 않은 입력값입니다 다시 입력해주세요.\r\n");
-				continue;
+			//System.out.println("현금을 투입하세요. : ");
+			//System.out.println("①:50,000원 ②:10,000원 ③:5,000원 ④:1,000원 ⑤:500원 ⑥:100원 ");
+			try
+			{
+				System.out.println("현금을 투입하세요. : ");
+				System.out.println("①:50,000원 ②:10,000원 ③:5,000원 ④:1,000원 ⑤:500원 ⑥:100원 ");
+				coin = sc.nextInt();
 			}
-
-			coin = Integer.parseInt(firstInput);
+			catch (Exception e)
+			{
+				//ioe.printStackTrace();
+				//System.out.println(ioe.toString());
+				System.out.println("현금을 다시 투입해주세요.");
+			}
 			money_list.get(coin - 1).setAmount(1); // 자판기 보유 화폐 증가
 			int now_coin = money_list.get(coin - 1).getValue();
 			sum_coin += now_coin;
-
-			System.out.println("더 넣으시겠습니까? : Y/N ");
+			System.out.printf("현재 투입된 금액은 : %,d원" , sum_coin);
+			System.out.println();
+			System.out.println("더 넣으시겠습니까? (Y/N) :");
 			String check = sc.next() ;
 			if (check.equals("N") || check.equals("n") ) {
 				flag = false;
-			System.out.println("현재 투입된 금액은 : " + sum_coin);
+
 			}
 		}
-		// System.out.println("현재 투입된 금액은 : " + sum_coin);
-		return sum_coin;
+	//	System.out.println("현재투입된 금액은 : " + sum_coin);	  //22.08.07 15:57분 수정 오류시 돌아올 것
+		return sum_coin ;
 	}
 
 	public ArrayList<Money> getMoney_list() {
@@ -74,10 +66,10 @@ public class MoneyInsert {
 	}
 	public void Display()
 	{
-		System.out.println(" 현금 단위      현금 수량");
+		System.out.println(" 현금 단위        현금      수량");
 		System.out.println("===================================================");
 		for (Money money : money_list)
-			System.out.printf(" %-5d (원)      %2d\n",money.getValue(),money.getAmount());
+			System.out.printf(" %,6d (원)      %2d\n",money.getValue(),money.getAmount());
 		System.out.println("===================================================");
 	}
 
@@ -89,26 +81,46 @@ public class MoneyInsert {
 		int _1000won = sum_coin  %50000%10000%5000/1000;
 		int _500won = sum_coin   %50000%10000%5000%1000/500;
 		int _100won = sum_coin   %50000%10000%5000%1000%500/100;
+		/*
 		System.out.println("50000원 권 :" + _50000won + "개 입니다.");
 		System.out.println("10000원 권 :" + _10000won + "개 입니다.");
 		System.out.println("5000원 권 :" + _5000won+ "개 입니다.");
 		System.out.println("1000원 권 :" + _1000won +"개 입니다.");
 		System.out.println("500원 권 :" + _500won +"개 입니다.");  
 		System.out.println("100원 권 :" + _100won+ "개 입니다.");  
-		// 거스름돈 반환 후의 자판기가 가지고 있는 거스름돈 통에서 차감
+		*/
+		//거스름돈 반환 후의 자판기가 가지고 있는 거스름돈 통에서 차감
 		money_list.get(0).setAmount(-_50000won);
 		money_list.get(1).setAmount(-_10000won);
 		money_list.get(2).setAmount(-_5000won);
 		money_list.get(3).setAmount(-_1000won);
 		money_list.get(4).setAmount(-_500won);
 		money_list.get(5).setAmount(-_100won);
-		System.out.println(sum_coin + "원 을 반환합니다");
-		sum_coin=0;
+		System.out.printf("거스름돈 %,d원 을 반환합니다. 이용 감사합니다~!~!~!%n", sum_coin);
+		sum_coin = 0;
 	}
 
 
 			
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
 		//테스트(확인) 자판기에 넣은 화폐 개수 확인

@@ -10,14 +10,14 @@ public class Test131
 		boolean bi = true;
 
 		Boolean wrapBi = new Boolean(bi);
-		Boolean wBi = bi;				// -----오토 박싱
+		Boolean wBi = bi;				//----- 오토 박싱
 										// 프리미티브 타입 bi를 객체에 대입한다 라는 상황
 										
 		int n = 300;
 		Integer wrapN = new Integer(n);
 
-		int n2 = wrapN;					//----오토 언박싱
-										//객체에 프리미티브타입 을 대입한다.
+		int n2 = wrapN;					//---- 오토 언박싱
+										// 객체에 프리미티브 타입 을 대입한다.
 								
 
 		float f = 300.3f;
@@ -26,20 +26,19 @@ public class Test131
 		System.out.println(wrapBi.toString());
 		System.out.println(wrapN.toString());
 		System.out.println(wrapF.toString());
-		//true
-		//300
-		//300.3
+		// true
+		// 300
+		// 300.3
 
 		System.out.println(wrapBi);
 		System.out.println(wrapN);
 		System.out.println(wrapF);
-		//ni :  12
-		//ni :   5
-		//ni :  10
+		// true
+		// 300
+		// 300.3
 
-		//Integer 클래스
+		// Integer 클래스
 		String sn = "12";
-		//sn : 10100
 
 		int ni = Integer.parseInt(sn);
 		System.out.printf("ni : %3d\n", ni);
@@ -53,7 +52,7 @@ public class Test131
 		ni = Integer.parseInt("A",16);
 		System.out.printf("ni : %3d\n",ni);
 
-		sn = Integer.toBinaryString(20);		//static 클래스 메소드겟구나 정수겠구나 반환자료명은 String 인가보다
+		sn = Integer.toBinaryString(20);		// static 클래스 메소드겠구나 정수겠구나 반환자료명은 String 인가보다~~
 		System.out.printf("sn : %s\n",sn);
 		sn = Integer.toOctalString(31);
 		System.out.printf("sn : %s\n",sn);
