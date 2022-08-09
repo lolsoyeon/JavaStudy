@@ -43,7 +43,7 @@ public class Test138
 
 		//--==>> false
 		//		 true
-
+		//어레이 리스트 어딧음?;
 		StringBuffer sb1 = new StringBuffer("korea");
 		StringBuffer sb2 = new StringBuffer("korea");
 
