@@ -6,6 +6,5 @@ public interface Items
 	public abstract int getAmount();	// Amount를 리턴 하는 함수
 	public abstract void setAmount();   // Amount를 설정 하는 함수(-1 해줌)
 	public abstract void fill();        // 5개씩 추가
-
 }
 

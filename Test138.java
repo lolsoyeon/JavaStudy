@@ -56,9 +56,9 @@ public class Test138
 
 		System.out.println(sb1);
 		//--==>> korea
-		// StringBuffer 타입
+		// StringBuffer 타입 okok
 
-		System.out.println(sb1.toString()); ///??
+		System.out.println(sb1.toString()); //toString()
 		//--==>> korea
 
 		System.out.println(sb1.toString().equals(sb2.toString()));
@@ -70,7 +70,7 @@ public class Test138
 		//-- StringBuffer 기본 생성자 호출(인스턴스 생성과정)
 		//	 기본적으로 생성되는 버퍼의 크기는 16
 
-		// capacity()
+		// capacity() 용량
 		System.out.println("버퍼크기 : " + sb3.capacity());
 		//--==>> 버퍼크기 : 16
 
@@ -83,7 +83,9 @@ public class Test138
 		name += "임시연";
 
 		System.out.println(name);
+		//--==>> 정미경한은영최동현임시연
 
+		// append() == +=
 		sb3.append("seoul");		//sb3 += "seoul";
 		sb3.append("korea");		//sb3 += "korea";
 		sb3.append("우리나라");		//sb3 += "우리나라";
@@ -100,11 +102,14 @@ public class Test138
 
 		///////////////////////////////////////////////////////
 
+
+		// toUpperCase() 소문자를 대문자로 
 		String temp1 = "java and oracle";
 		System.out.println(temp1.toUpperCase());
 		//--==>> JAVA AND ORACLE   
 		// 모두 대문자로 변한것을 알 수있다.
 
+		// toLowerCase() 대문자를 소문자로
 		String temp2 = "JAVA AND ORACLE";
 		System.out.println(temp1.toLowerCase());
 		//--==>> java and oracle
@@ -117,7 +122,7 @@ public class Test138
 		System.out.println(temp3.toUpperCase());
 		//--==>> SEOULKOREA우리나라대한민국
 	
-		System.out.println(sb3.toString().toUpperCase());
+		System.out.println(sb3.toString().toUpperCase());		//2줄이 1줄로 거눙
 
 		//--==>> SEOULKOREA우리나라대한민국
 
@@ -146,9 +151,10 @@ public class Test138
 		// System.out.println("korea 뒤에 사랑 추가 : " + sb3.toString());
 
 		//--==>> korea 뒤에 사랑 추가 : 한국seoulkorea사랑우리나라대한민국
-
+		System.out.println("==========================절취선");
 		// 테스트
 		System.out.println(sb3.toString());
+		//--==>> 한국seoulkorea우리나라대한민국
 
 		// 테스트2
 		//sb3.insert(12,"사랑");
@@ -166,9 +172,9 @@ public class Test138
 		// 테스트5
 		System.out.println(sb3.insert(sb3.indexOf("korea") + "korea".length() ,"사랑"));
 		//													  -------------5
-		//--==>>한국seoulkorea사랑우리나라대한민국
+		//--==>> 한국seoulkorea사랑우리나라대한민국
 
-		//○ 대상 문자열 (sb3) 에서 
+		// ○ 대상 문자열 (sb3) 에서 
 		//『우리나라』  문자열 삭제
 
 		//우리나라 삭제하려면 길이는 4개 
@@ -222,9 +228,5 @@ public class Test138
 		//
 		System.out.println("버퍼 크기  : " + sb3.capacity());
 		//--==>> 버퍼 크기 : 7?????
-
-
-
-
 	}
 }

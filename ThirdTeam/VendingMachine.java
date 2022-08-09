@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class VendingMachine
 {
 	public MoneyInsert moneyinsert;
-	// 주요 변수들 선언
+	//주요 변수들 선언
 	private List<Items> items ;
 	private int amount = 5;
 	private int total = 0;
@@ -19,11 +19,11 @@ public class VendingMachine
 	//밴딩 머신에서 재고 관리 및 돈 관리 ??????????????
 	//System.out.println("S" + size[0]);
 	
-	// 핵심
+	//핵심
 	public VendingMachine()
 	{	
-		// List 인덱스로 이것들을 접근할 수 있게 됨
-		items = new ArrayList<>();		// 선언 이유
+		//List 인덱스로 이것들을 접근할 수 있게 됨
+		items = new ArrayList<>();		//선언 이유
 		items.add(new Clothes(1, "민소매", 5000, new int[]{5,5,5}));
 		items.add(new Clothes(2, "반팔", 15000, new int[]{5,5,5}));
 		items.add(new Clothes(3, "코트", 50000, new int[]{5,5,5}));
@@ -35,7 +35,7 @@ public class VendingMachine
 		items.add(new Clothes(9, "냉장고바지", 10000, new int[]{5,5,5}));
 		items.add(new Clothes(10, "히트텍하의", 10000, new int[]{5,5,5}));
 		items.add(new Accessories(11, "우산", 3000,amount));
-		items.add(new Accessories(12, "모자", 15000,amount));
+		items.add(new Accessories(12, "손풍기", 15000,amount));
 		items.add(new Accessories(13, "목도리", 15000,amount));
 		items.add(new Accessories(14, "장갑", 10000,amount));
 		items.add(new Accessories(15, "선글라스", 30000,amount));
@@ -55,19 +55,19 @@ public class VendingMachine
 		return remain;
 	}
 
-	public boolean stock(int itemId){
+	public boolean stock(int itemId){							//
 		this.items.get(itemId).fill();
 		return true ;
 	}
-	public int getItemIdPrice(int itemId){
+	public int getItemIdPrice(int itemId){						//해당 물건 가격 띄워주는 기능				
 		return this.items.get(itemId).getPrice();
-	}
+	}			
 	public int getInsert(){
 		int coin = moneyinsert.insert_coin();
 		return coin ;
 	}
-	public int totalReturn(){return total;}
-	public void setTotal(int price){total += price ;}
+	public int totalReturn(){return total;}						//합계 리턴 기능
+	public void setTotal(int price){total += price ;}			//돈 추가 기능
 
 	public String getName(int itemId){
 		return this.items.get(itemId).getName();

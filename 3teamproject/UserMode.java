@@ -21,16 +21,6 @@ public class UserMode implements Mode
 
 	public void display(){
 		items = machine.getItems();	//	VendingMachine에 있는 Items를 가져온다	//this.machine.getItems();
-	/*	
- System.out.printf("_____  _         _    _                            ___                                            _    ");        
- System.out.printf("/  __ \| |       | |  | |                  ___     / _ \                                          (_)");     
- System.out.printf("| /  \/| |  ___  | |_ | |__    ___  ___   ( _ )   / /_\ \  ___   ___   ___  ___  ___   ___   _ __  _   ___  ___ ");
- System.out.printf("| |    | | / _ \ | __|| '_ \  / _ \/ __|  / _ \/\ |  _  | / __| / __| / _ \/ __|/ __| / _ \ | '__|| | / _ \/ __|");
- System.out.printf("| \__/\| || (_) || |_ | | | ||  __/\__ \ | (_>  < | | | || (__ | (__ |  __/\__ \\__ \| (_) || |   | ||  __/\__ \");
- System.out.printf(" \____/|_| \___/  \__||_| |_| \___||___/  \___/\/ \_| |_/ \___| \___| \___||___/|___/ \___/ |_|   |_| \___||___/");
-                   */                                                                                             
-                                                                                                                
-
 		System.out.println("==============================================================================================================================");
 		System.out.println("의류잡화 자판기 입니다. (번호:상품(재고))");
 		System.out.println("\t\t\t\t\t\t[상의]");
@@ -179,18 +169,17 @@ public class UserMode implements Mode
 					ob.middleCalc();
 					discount = ob.resultCalc();
 				}
-
-				System.out.printf("최종 결제 금액은 : %,d\n",machine.totalReturn()-discount);
+				System.out.printf("최종 결제 금액은 : %,d원\n",machine.totalReturn()-discount);
 				remain = machine.pay(machine.totalReturn()-discount);
 				machine.returnRemainMoney(remain);
-				System.out.print("이전화면으로 돌아가려면 아무키나 입력하세요.......");
+				System.out.print("이전 화면으로 돌아가려면 아무키나 입력하세요.......");
 				String anykey = br.readLine();
 				return 0;
 			}
 			else if (user.equals("n") || user.equals("N"))
 			{
 				remain += machine.totalReturn();
-				System.out.print("이전화면으로 돌아가려면 아무키나 입력하세요.......");
+				System.out.print("이전 화면으로 돌아가려면 아무키나 입력하세요.......");
 				String anykey = br.readLine();
 				return remain;
 			}
