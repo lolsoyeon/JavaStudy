@@ -8,7 +8,7 @@
 	(추상클래스 : 미완성된 클래스)
 
 	Calendar ob = new Calendar();
-	이와 같은 구문을 총해 인스턴스 생성 불가
+	이와 같은 구문을 통해 인스턴스 생성 불가
 
 
 	Calener 클래스 객체(인스턴스)를 생성할 수 있는 방법
@@ -23,7 +23,7 @@
 */
 
 
-//년, 월, 일, 요일을 Calendar 객체로 부터 가져와서 출력
+// 년, 월, 일, 요일을 Calendar 객체로 부터 가져와서 출력
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -31,13 +31,13 @@ public class Test142
 {
 	public static void main(String[] args)
 	{
-		//Calendar기반 인스턴스 생성 안됨
-		//Calendar ob = new Calendar();
+		// Calendar기반 인스턴스 생성 안됨
+		// Calendar ob = new Calendar();
 
 		Calendar rightNow = Calendar.getInstance();
 
-		//생성된 달력 인스턴스를 통해
-		//날짜 관련 정보를 얻어 낼 수 있는 메소드 『get()』
+		// 생성된 달력 인스턴스를 통해
+		// 날짜 관련 정보를 얻어 낼 수 있는 메소드 『get()』
 
 		int y = rightNow.get(Calendar.YEAR);
 		System.out.println("y : " + y);
@@ -45,7 +45,7 @@ public class Test142
 
 		int m = rightNow.get(Calendar.MONTH) + 1; //『+1』 check~!~!~!~!~!
 		System.out.println("m : " + m);
-		//--=>>m : 7
+		//--=>> m : 7
 
 		int d = rightNow.get(Calendar.DATE);
 		System.out.println("d: " + d);
@@ -53,7 +53,7 @@ public class Test142
 		int w = rightNow.get(Calendar.DAY_OF_WEEK);
 		System.out.println("w: " + w);
 
-			//테스트
+			// 테스트
 		/*
 		System.out.println(Calendar.SUNDAY);
 		System.out.println(Calendar.MONDAY);
@@ -91,11 +91,11 @@ public class Test142
 		System.out.println(y + "-" + m + "-" + d + "-" + week);
 		
 
-		//Calendar 클래스 기반 인스턴스 생성
+		// Calendar 클래스 기반 인스턴스 생성
 		Calendar rightNow2 = new GregorianCalendar();
 		String[] week2 = {"일요일","월요일","화요일","수요일","목요일","금요일","토요일"};
 		
-		//달력 날짜 세팅 『set()』 메소드 활용
+		// 달력 날짜 세팅 『set()』 메소드 활용
 
 		rightNow2.set(2023,0,16);		//2023년 1월 16일 check~~~!!!
 
@@ -103,11 +103,11 @@ public class Test142
 		//--==>> 2
 
 
-		//이구문은 이해가 안감.......???..
+		// 이구문은 이해가 안감.......???..ok 확인함
+		// -1 해줘야 하는이유 
+		// case 1이 일요일 2가 월요일인데 배열상에 0번이 일요일 1번이 월요일 이므로
+		// 배열로 선언했으니 -1해주면 지자리가 출력된다.
 		System.out.println(week2[rightNow2.get(Calendar.DAY_OF_WEEK)-1]);	
 		//--==>> 월요일
-
-		
 	}
-
 }

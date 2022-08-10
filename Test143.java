@@ -21,7 +21,6 @@ get() 메소드를 이용하여 쉽게 가져올(사용할) 수있다.
 
 getInstance()메소드는 내부적으로 GregorianCalendar 객체를 생성하여
 돌려주기 때문에 GregorianCalendar 객체를 직접 생성하여 시간 정보를 구할 수도 있다.★★★★
-
 */
 
 /*
@@ -30,7 +29,6 @@ getInstance()메소드는 내부적으로 GregorianCalendar 객체를 생성하여
 달력을 그려주는 (출력하는) 프로그램을 구현한다.
 단, Calendar 클래스를 활용하여 작성할 수 있도록 한다,
 ※ API Document 를 참조하여 getActualMaximum()메소드의 활용 방법 검토 할것~!
-
 
 실행예)
 연도입력 : 0

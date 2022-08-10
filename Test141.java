@@ -89,7 +89,7 @@ public class Test141
 		String name = new String("최동현");
 
 		System.out.println("디폴트 캐릭터 셋 : " + System.getProperty("file.encoding"));
-		//--==>>디폴트 캐릭터 셋 : MS949
+		//--==>> 디폴트 캐릭터 셋 : MS949
 
 
 		//『String.getByte()』
@@ -114,9 +114,9 @@ public class Test141
 			[-10]
 		*/
 		
-		//"UTF-8" 캐릭터셋으로 바이트 배열을 반환
+		// "UTF-8" 캐릭터셋으로 바이트 배열을 반환
 		buf = name.getBytes("utf-8");			//내가 지정함
-		//--==>>에러 발생(컴파일 에러)
+		//--==>> 에러 발생(컴파일 에러)
 		//		UnsupportedEncodingException  
 
 		// → 예외 처리후... 다시 확인
@@ -142,29 +142,29 @@ public class Test141
 			[-124]
 		*/
 
-		//new String("최동현");			??
+		// new String("최동현");			??
 
-		//new String(바이트배열, 인코딩방식);
+		// new String(바이트배열, 인코딩방식);
 
 
-		//new String(buf,"utf-8");
+		// new String(buf,"utf-8");
 
-		//utf-8형태로 저장된 바이트 배열을
-		//String 객체로 파라미터 값 『utf-8』 을 부여하여 생성
-		//→ 즉 utf-8 기반으로 buf 바이트배열을 합쳐
-		//	 문자열 객체 생성한 후 이름 출력
+		// utf-8형태로 저장된 바이트 배열을
+		// String 객체로 파라미터 값 『utf-8』 을 부여하여 생성
+		// → 즉 utf-8 기반으로 buf 바이트배열을 합쳐
+		//	  문자열 객체 생성한 후 이름 출력
 		System.out.println("Value 1 : " + new String(buf, "utf-8"));
 
-		//--=>>Value 1 : 최동현
+		//--=>> Value 1 : 최동현
 
 		System.out.println();		//개행
 
 
-		//utf-8 형태로 저장된 바이트 배열을
-		//String 객체로 파라미터 값 없이
-		//디폴트 캐릭터 셋(MS949)을 부여하여 생성
+		// utf-8 형태로 저장된 바이트 배열을
+		// String 객체로 파라미터 값 없이
+		// 디폴트 캐릭터 셋(MS949)을 부여하여 생성
 		System.out.println("Value 2 : " + new String(buf));
-		//--==>>Value 2 : 理쒕룞?쁽
+		//--==>> Value 2 : 理쒕룞?쁽
 
 
 		System.out.println();	// 개행
@@ -172,18 +172,18 @@ public class Test141
 		String convert = new String(name.getBytes("euc-kr"),"utf-8");
 
 		System.out.println("Value 3: " + convert);
-		//--==>>Value 3: ?????
+		//--==>> Value 3: ?????
 
 		buf = convert.getBytes();
 		System.out.println("Length : " + buf.length);
-		//--==>>Length : 5
+		//--==>> Length : 5
 
 		buf = convert.getBytes("utf-8");
 		System.out.println("Length : " + buf.length);
-		//--==>>Length : 14
+		//--==>> Length : 14
 
 		/*
-		euc-kr 을 utf-8로 변환하겠다는 읜도로
+		euc-kr 을 utf-8로 변환하겠다는 의도로
 		위와 같이 코딩을 해버리면
 		이러한 변환(잘못된 변환)으로 인해 배열이 깨져서
 		euc-kr 이든 utf-8 이든.....
