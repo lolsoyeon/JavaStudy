@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	var dataList = [];
+
+	function inputData() {
+		var jsonStr = '['
+				+ ' {"_id":100001, "req_type":"A", "request_time":"20221029130220", "number":"01000000001"},'
+				+ ' {"_id":100002, "req_type":"A", "request_time":"20221029130222", "number":"01000000002"},'
+				+ ' {"_id":100003, "req_type":"B", "request_time":"20221029130224", "number":"01000000003"},'
+				+ ' {"_id":100004, "req_type":"C", "request_time":"20221029130623", "number":"01000000004"}'
+				+ ']';
+		dataList = JSON.parse(jsonStr);
+		drawTable(dataList);
+	}
+
+	function drawTable(dataList) {
+		var str = "";
+		for (var i = 0; i < dataList.length; i++) {
+			var item = dataList[i];
+			var requestId = "(샘플)" + item._id;
+			var reqType = item.req_type;
+			var requestTime = formatTime(item.request_time);
+			var phoneNumber = formatPhoneNumber(item.number);
+
+			str += "<tr>";
+			str += "<td>" + requestId + "</td>";
+			str += "<td>" + reqType + "</td>";
+			str += "<td>" + requestTime + "</td>";
+			str += "<td>" + phoneNumber + "</td>";
+			str += "</tr>";
+		}
+
+		$("#tblBody").html(str);
+	}
+
+	function formatTime(timestamp) {
+		var year = timestamp.substring(0, 4);
+		var month = timestamp.substring(4, 6);
+		var day = timestamp.substring(6, 8);
+		var hours = timestamp.substring(8, 10);
+		var minutes = timestamp.substring(10, 12);
+		var seconds = timestamp.substring(12, 14);
+		var milliseconds = timestamp.substring(14);
+
+		return year + "-" + month + "-" + day + " " + hours + ":" + minutes
+				+ ":" + seconds + "." + milliseconds;
+	}
+
+	function formatPhoneNumber(number) {
+		var formattedNumber = number.replace(/(\d{3})(\d{4})(\d{4})/,
+				"$1-$2-$3");
+		return formattedNumber;
+	}
+	
+	function searchByReqType() {
+	  var selectedReqType = $("#selectReqType option:selected").val();
+	  var filteredDataList = dataList.filter(function(item) {
+	    return item.req_type === selectedReqType || selectedReqType === "ALL";
+	  });
+	  drawTable(filteredDataList);
+	  var count = filteredDataList.length;
+	  alert("검색된 개수: " + count + " 개");
+	}
+
+	function tableRemove() {
+	  $("#tblBody").html("");
+	  console.log("테이블 제거");
+	}
+</script>
+</head>
+<body>
+	<div style="margin: 5px">
+		<input type="button" value="데이터 읽기" onclick="inputData()"> <select
+			id="selectReqType" onchange="searchByReqType()">
+			<option value="ALL">전체</option>
+			<option value="A">타입 A</option>
+			<option value="B">타입 B</option>
+			<option value="C">타입 C</option>
+		</select> <input type="button" value="데이터 제거" onclick="tableRemove()">
+	</div>
+	<div id="tableArea" style="margin: 5px">
+		<table border="1">
+			<thead>
+				<tr>
+					<th>요청 ID
+					<th>요청유형</th>
+					<th>요청시간</th>
+					<th>전화번호</th>
+				</tr>
+			</thead>
+			<tbody id="tblBody">
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
